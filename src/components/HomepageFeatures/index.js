@@ -4,42 +4,66 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Built for Storytellers',
+    img: '/img/logo.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Create and publish Ink-based interactive fiction with minimal effort. Focus on writing, not setup.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Powerful Authoring Features',
+    img: '/img/logo.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Use Ink tags and custom markup to control layout and gameplay flow directly from your story script.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Customizable Look & Feel',
+    img: '/img/logo.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Use images, backgrounds, sounds, and video in your story. Add your own themes, fonts, and CSS styles. 
+      </>
+    ),
+  },
+  {
+    title: 'Debug & Inspect',
+    img: '/img/logo.png',
+    description: (
+      <>
+        Built-in debugger helps you explore Ink variables, functions, and flow — right inside your browser.
+      </>
+    ),
+  },
+  {
+    title: 'Flexible Publishing',
+    img: '/img/logo.png',
+    description: (
+      <>
+        Export your story as a progressive web app, a single HTML file, or a desktop executable for Windows, macOS, and Linux.
+      </>
+    ),
+  },
+  {
+    title: 'For Developers, Too',
+    img: '/img/logo.png',
+    description: (
+      <>
+        Extend Ink with JavaScript functions, embed custom UI components, or tweak the Preact-based frontend to build your own features.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({img, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureImg} role="img" src={img} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

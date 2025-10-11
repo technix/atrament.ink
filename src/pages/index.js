@@ -20,15 +20,13 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/quickstart">
-            ⏱️ Quick Start
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/quickstart">
             📘 Documentation
           </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Link
+            className="button button--secondary button--lg"
+            to="https://technix.github.io/atrament-web-ui">
+            ⏱️ Demo
+          </Link>
           <Link
             className="button button--secondary button--lg"
             to="https://github.com/technix/atrament-web-ui">
