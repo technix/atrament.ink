@@ -20,6 +20,12 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/quickstart">
+            ⏱️ Quick Start
+          </Link>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/atrament">
             📘 Documentation
           </Link>
           <Link
