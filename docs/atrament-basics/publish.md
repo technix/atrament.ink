@@ -3,7 +3,7 @@ sidebar_position: 10
 ---
 
 
-# Publishing
+# Publishing *
 
 
 ### Web application

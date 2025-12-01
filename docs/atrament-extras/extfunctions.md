@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# External functions
+# External functions *
 
 
 If you add any external functions to your Ink file, the JS function code should be added as a separate `*.js` file to the `resources/externals` folder. See example file `example.js.txt` for details.

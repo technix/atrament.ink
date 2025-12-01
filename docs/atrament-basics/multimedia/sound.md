@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Sound, music, and video
+# Sound, music, and video *
 
 * #PLAY_SOUND, #STOP_SOUND
 * #AUDIO

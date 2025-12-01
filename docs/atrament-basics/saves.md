@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# Game saves
+# Game saves *
 
 Atrament Web UI supports the following save types:
 

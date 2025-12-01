@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Interface sections
+# Interface sections *
 
 Toolbar and About menu
 
