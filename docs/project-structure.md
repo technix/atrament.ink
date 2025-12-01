@@ -54,11 +54,11 @@ The `resources` folder contains additional resources for the Atrament Web UI: fo
 
 | Folder | Description |
 |---|---|
-| `resources/externals` | Contains external function definition files. See "[External functions](atrament-extras/extfunctions.md)". |
-| `resources/fonts` | Contains custom fonts. You can add your fonts here or remove existing ones. See "[Customization](atrament-extras/customization.md)". |
-| `resources/locales` | Contains translations of the Atrament UI. You can use `en.json` as a boilerplate to create a translation to your language. |
-| `resources/styles` | Contains `custom.css` file, where you can define custom CSS classes or override existing ones. See "[Customization](atrament-extras/customization.md)". |
-| `resources/themes` | Contains color themes for the application. See "[Customization](atrament-extras/customization.md)". |
+| `externals` | Contains external function definition files. See "[External functions](atrament-extras/extfunctions.md)". |
+| `fonts` | Contains custom fonts. You can add your fonts here or remove existing ones. See "[Customization](atrament-extras/customization.md)". |
+| `locales` | Contains translations of the Atrament UI. You can use `en.json` as a boilerplate to create a translation to your language. |
+| `styles` | Contains `custom.css` file, where you can define custom CSS classes or override existing ones. See "[Customization](atrament-extras/customization.md)". |
+| `themes` | Contains color themes for the application. See "[Customization](atrament-extras/customization.md)". |
 
 ## Configuration
 

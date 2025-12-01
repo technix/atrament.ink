@@ -8,10 +8,6 @@ Atrament is a modular tool to create text games or interactive fiction stories f
 
 Most of this documentation describes how to create games with Atrament Web UI.
 
-## Demo
-
-<iframe src="https://technix.github.io/atrament-web-ui/" height="600" width="400" style={{ border: "2px solid #69a2c2" }}></iframe>
-
 ## Components
 
 Atrament consists of several JS libraries and applications: Atrament Core, Atrament Web, Atrament Web UI, and Atrament Wizard.
