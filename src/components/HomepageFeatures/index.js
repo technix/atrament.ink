@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Built for Storytellers',
-    img: '/img/logo.png',
+    img: '/img/icons8-mind-map-100.png',
     description: (
       <>
         Create and publish Ink-based interactive fiction with minimal effort. Focus on writing, not setup.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Powerful Authoring Features',
-    img: '/img/logo.png',
+    img: '/img/icons8-template-100.png',
     description: (
       <>
         Use Ink tags and custom markup to control layout and gameplay flow directly from your story script.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Customizable Look & Feel',
-    img: '/img/logo.png',
+    img: '/img/icons8-medium-icons-100.png',
     description: (
       <>
         Use images, backgrounds, sounds, and video in your story. Add your own themes, fonts, and CSS styles. 
@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Debug & Inspect',
-    img: '/img/logo.png',
+    img: '/img/icons8-inspect-code-100.png',
     description: (
       <>
         Built-in debugger helps you explore Ink variables, functions, and flow — right inside your browser.
@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Flexible Publishing',
-    img: '/img/logo.png',
+    img: '/img/icons8-app-symbol-100.png',
     description: (
       <>
         Export your story as a progressive web app, a single HTML file, or a desktop executable for Windows, macOS, and Linux.
@@ -50,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'For Developers, Too',
-    img: '/img/logo.png',
+    img: '/img/icons8-code-100.png',
     description: (
       <>
         Extend Ink with JavaScript functions, embed custom UI components, or tweak the Preact-based frontend to build your own features.
