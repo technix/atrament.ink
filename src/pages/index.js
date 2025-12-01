@@ -12,32 +12,33 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/quickstart">
-            ⏱️ Quick Start
-          </Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/atrament">
-            📘 Documentation
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://technix.github.io/atrament-web-ui">
-            ⏱️ Demo
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://github.com/technix/atrament-web-ui">
-            💻 Source
-          </Link>
+        <div className="row">
+          <div className={clsx('col col--3')}>
+            <img src="img/atrament-logo.svg" style={{ maxWidth: '200px' }} />
+          </div>
+          <div className={clsx('col col--9 text--left')}>
+            <Heading as="h1" className="hero__title">
+              {siteConfig.title}
+            </Heading>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/atrament">
+                📘 Documentation
+              </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="https://technix.github.io/atrament-web-ui">
+                ⏱️ Demo
+              </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="https://github.com/technix/atrament-web-ui">
+                💻 Source
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>
