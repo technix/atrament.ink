@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Story *
@@ -11,6 +11,12 @@ sidebar_position: 4
 | `# continue_maximally: false` | Pause the story after each line. |
 | `# single_scene` | Store only the last scene in the Atrament state. |
 | `# scenes_align: center` | Scene alignment on the screen. Can be set to `top`, `center`, or `bottom`. |
+
+## RESTART
+
+| Tag | Description                |
+| :-------- | :------------------------- |
+| `# RESTART` | Start game from beginning. |
 
 ## CLEAR
 

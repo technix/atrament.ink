@@ -2,12 +2,38 @@
 sidebar_position: 2
 ---
 
-# External functions *
+# External functions
 
+You can defined game functions in JavaScript that can be called directly from Ink story.
 
-If you add any external functions to your Ink file, the JS function code should be added as a separate `*.js` file to the `resources/externals` folder. See example file `example.js.txt` for details.
+To declare an external function, add this on top of your main story file:
 
+```c title="story.ink"
+EXTERNAL hello(name)
+```
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# allow_external_function_fallbacks` | If the function defined with EXTERNAL is not found, run Ink function with the same name instead. |
+Then create a JS file in the `resources/externals` folder with the following content:
+
+```js title="external_hello.js"
+function external_function_Hello(name) {
+  return `Hello, ${name}`;
+}
+
+export default {
+  name: "hello", // this is the name of external function
+  external: external_function_Hello
+}
+```
+
+See `resources/externals/example.js.txt` for more defails.
+
+## Fallbacks
+
+By default, if function defined with `EXTERNAL` is not found in the runtime environment, Ink fails with the "Missing function binding for external" error.
+
+To avoid this, you can create Ink function with the same name - it will act as a fallback and run if external function is not found. To enable Ink fallbacks, add `#allow_external_function_fallbacks` global tag to your Ink script.
+
+```
+# allow_external_function_fallbacks
+Your story begins here.
+```

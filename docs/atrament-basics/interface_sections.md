@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
-# Interface sections *
+# Interface *
 
 Toolbar and About menu
 
