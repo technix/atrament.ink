@@ -2,38 +2,81 @@
 sidebar_position: 4
 ---
 
-# Choices *
+# Choices
 
-## Choices appearance
+## Appearance
 
-| Tag | Description                |
+To change the choice appearance, use `#choices` global tag with a combination of attributes:
+
+| Attribute | Description                |
 | :-------- | :------------------------- |
-| `# choices: grouped numbered` | Changes the choices appearance. Can be set to any combination of: `grouped` (displayed as button group); `numbered` (displays numbers of choices); `left` or `right` (aligns choice text to the left or right); `row` (show choices in a single row instead of a column) |
+| `grouped` | Display choices as a button group. |
+| `numbered` | Prepend a choice text with a number. |
+| `left` | Align choice text to the left. |
+| `right` | Align choice text to the right. |
+| `row` | Show all choices in a single row. |
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# SHUFFLE_CHOICES` | Shuffle choice order in this knot. |
-| `# PROMPT: What would you like to do?` | Display prompt text before the choices. |
+```
+# choices: grouped numbered left
+```
 
+## Shuffled choices
 
-### Choice tags
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# UNCLICKABLE` | The choice can't be selected. Alternative names: `#DISABLED`, `#INACTIVE` |
-| `# CLASS: classname` | Apply CSS class to the choice `<button>` element. |
+You can display choices in random order with `#SHUFFLE_CHOICES` knot tag, this can be useful for puzzles. The tag is applied to the choices immediately after current scene.
 
-* Choice appearance: #choices
-* #SHUFFLE_CHOICES
-* #PROMPT
-* #UNCLICKABLE/#DISABLED/#INACTIVE
-* Click to continue
-  * Standard
-  * Configurable
+```c
+=== guess_the_color
+# SHUFFLE_CHOICES
+What is the color of grass and leaves?
++ [Red] -> wrong_choice
++ [Orange] -> wrong_choice
++ [Yellow] -> wrong_choice
++ [Green] -> right_choice
++ [Blue] -> wrong_choice
++ [Purple] -> wrong_choice
+```
 
+## Prompt
+
+You can display choice prompt before the choices, using `#PROMPT` knot tag. The tag is applied to the choices immediately after current scene.
+
+```c
+=== combat
+// this text will be shown above choices
+# PROMPT: Choose your action:
+Your enemy is waiting.
++ [Attack] -> combat_attack
++ [Defend] -> combat_defend
++ [Evade] -> combat_evade
+```
+
+## Disabled choices
+
+Instead of hiding choice based on condition, you can make it unclickable with `#UNCLICKABLE` choice tag (alternate syntax: `#DISABLED`, `#INACTIVE`). The choice will be displayed as disabled, and users will not be able to choose it.
+
+```c
+VAR weapon = "sword"
+-> story
+=== story
+{weapon == "sword":You are holding a sword|You are unarmed}.
+// The choices are enabled depending on the value
+// of the "weapon" variable
++ [Attack with the sword #{weapon == "":UNCLICKABLE}]
+    You are swinging your sword.
+    -> story
++ [Draw the sword #{weapon == "sword":UNCLICKABLE}]
+    ~ weapon = "sword"
+    -> story
++ [Hide your weapon #{weapon == "":UNCLICKABLE}]
+    ~ weapon = ""
+    -> story
++ [Return to map #UNCLICKABLE] // this one is always disabled
+    -> story
+```
 
 ## Click to continue
 
-A single choice with text '>>>' is treated as "click to continue". Choice list is not shown, and player can continue story by clicking the screen or pressing "Space" or "Enter" key. After 3 seconds of inactivity, animated hint is displayed in the bottom of the screen.
+A single choice with text `>>>` is treated as "click to continue". Choice list is not shown, and player can continue story by clicking the screen or pressing "Space" or "Enter" key. After 3 seconds of inactivity, animated hint is displayed in the bottom of the screen.
 
 ```
 This story will proceed when user clicks screen.

@@ -2,46 +2,72 @@
 sidebar_position: 3
 ---
 
-# Story *
+# Story
 
-## Story appearance
+## Appearance
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# continue_maximally: false` | Pause the story after each line. |
-| `# single_scene` | Store only the last scene in the Atrament state. |
-| `# scenes_align: center` | Scene alignment on the screen. Can be set to `top`, `center`, or `bottom`. |
+### Scenes alignment
 
-## RESTART
+Atrament outputs scenes in the middle of the screen. You can change scene alignment with `#scenes_align` global tag, setting it to `top`, `center`, or `bottom`.
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# RESTART` | Start game from beginning. |
+```
+# scenes_align: center
+``` 
 
-## CLEAR
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# CLEAR` | Clear scenes list before saving current scene to Atrament state. |
+### Scene behavior
+
+Atrament outputs all the paragraphs between choice blocks as one scene. If you need line-by-line output, add `#continue_maximally` global tag to your story and set it to `false`:
+
+```
+# continue_maximally: false
+```
+
+## History
+
+Atrament shows a scrollable history of previous scenes. If you don't need it, you can disable it with `#single_scene` global tag:
+
+```
+# single_scene
+```
+
+To clear scene history, you can use `#CLEAR` knot tag. This is useful when player enters a new location or conversation.
+
+```c
+=== house_scene
+# CLEAR
+You are standing in an open field west of a white house.
+```
+
+## Restart
+
+To restart the game from the beginning, you can use `#RESTART` knot tag:
+
+```c
+=== game_over
+Game over.
++ [Restart]
+    #RESTART
+    ->DONE
+```
 
 ## Hypertext
 
-| Tag | Description                |
-| :-------- | :------------------------- |
-| `# hypertext` | Use links instead of choices. |
-| `# HYPERTEXT` | Use links instead of choices for this scene. |
+In the hypertext mode the choices are not displayed below the scene text. You can link specific portions of scene text to the choices.
 
-If global tag `hypertext` is set, Atrament UI switches to hypertext mode. In this mode choice options are not displayed. However, author can use `[link=target choice text]link text[/link]` to link specific phrases to the choices.
+To enable this mode for the whole game, use `#hypertext` global tag. There is no way to turn it off later.
 
-For better user experience in hypertext mode authors can set global tags `single_scene` and `scenes_align: top`.
-
-Author can enable hypertext for a chosen scene with `HYPERTEXT` scene tag.
-
-```
+```c
 # hypertext
-# single_scene
-# scenes_align: top
+```
 
+However, you can enable hypertext for certain scenes only. Use `#HYPERTEXT` knot tag to enable it for a specific scene:
+
+```c
+=== house_scene
+# HYPERTEXT
+
+// links use the choice text as a reference
 You are standing in an open field west of a white house, 
 with a boarded [link=Open door]front door[/link]. 
 There is a [link=Examine mailbox]small mailbox[/link] here.
@@ -49,3 +75,7 @@ There is a [link=Examine mailbox]small mailbox[/link] here.
 + [Examine mailbox] -> examine_mailbox
 + [Open door] -> inside_house
 ```
+
+If your entire game is in be hypertext mode, it is recommended to set the following global tags:
+* `#single_scene` - disables scrollable history
+* `#scenes_align: top` - aligns text to the top of the window

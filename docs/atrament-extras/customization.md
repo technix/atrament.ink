@@ -13,6 +13,7 @@ To add custom CSS classes or modify styles of existing elements, edit `resources
 | Tag | Description                |
 | :-------- | :------------------------- |
 | `# CLASS: classname` | Apply CSS class to the paragraph `<div>` element. |
+| `# CLASS: classname` | Apply CSS class to the choice `<button>` element. |
 
 ## Themes
 

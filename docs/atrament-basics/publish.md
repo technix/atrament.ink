@@ -3,51 +3,61 @@ sidebar_position: 10
 ---
 
 
-# Publishing *
+# Publishing
 
+Atrament project can be published as a single HTML file, a progressive web application, or as a standalone executable for desktop.
 
-### Web application
-Default Atrament UI build is a progressive web application for web server deployment.
-```
-npm run build-web
-```
-The standalone web application files will be in `build/web` folder. Use `npm run preview` command to test it in browser at http://localhost:4173/.
+## Single file
 
+To export a game as a single HTML file (similar to Inky web export or Twine export), run this command in the terminal:
 
-### Single file build
-```
+```bash
 npm run build-singlefile
 ```
-The game can be exported to a standalone web page, which can be opened locally - similar to Inky or Twine web export.
 
-To export game in a single file format, run `npm run build-singlefile` command. The resulting web page files will be in the `build/singlefile` folder.
+The resulting web page files will be in the `build/singlefile` folder.
 
-*Please note: single file build uses only system fonts to reduce file size. If you want to include all fonts from the `resources/fonts` folder, use `npm run build-singlefile -- -- --embed-fonts` command to build the game.*
+:::tip
+Single file build uses only system fonts to reduce output file size. If you want to include all fonts from the `resources/fonts` folder, use `npm run build-singlefile -- -- --embed-fonts` command to build the game.
+:::
 
-### Standalone executables build
+
+## Web application
+
+To export a game as a progressive web application, run this command in the terminal:
+
+```bash
+npm run build-web
+```
+
+The resulting web application files will be in `build/web` folder. 
+
+To preview your application, run this command in the terminal:
+```bash
+npm run preview
+``` 
+The app will be available at http://localhost:4173/.
+
+
+## Desktop executables
+
+:::info
+Atrament uses [NeutralinoJS](https://neutralino.js.org/) to create executables for desktop OSes.
+:::
+
+
+To build standalone executables for Windows, Linux, and MacOS, run this command in the terminal:
+
 ```
 npm run build-standalone
 ```
-To build standalone executables for Windows, Linux, and MacOS, use `npm run build-standalone` command. The folder with executables for all platforms will be in the `build/standalone` folder. The build also creates ZIP archives for each platform.
 
-### Zipped game content
-Atrament UI supports zipped game content, when whole game is loaded into browser as a single zip file. The advantage of this mode is instant asset loading at the cost of increased startup time. However, it makes sense only for default web export mode.
+:::warning
+On first run, this command downloads NeutralinoJS build toolchain, so internet connection is required.
+:::
 
-To enable this feature, edit `atrament.config.json` and add `zip` option to it with the name of zip file:
-```
-{
-  ...
-  "game": {
-    "path": "game",
-    "source": "gamefile.ink",
-    "zip": "yourgame.zip"
-  }
-}
-```
-*Please note: this option is ignored for development and single file builds.*
 
-### Publishing Atrament games from Inky
-You can create a single file Atrament games written with Inky, without setting up an Atrament project. Run this command in the project folder with Ink files to create a single file build:
-```
-npx atrament-wizard publish
-```
+Executable files for all platforms will be in the `build/standalone` folder. The build also creates ZIP archives for each platform.
+
+
+
