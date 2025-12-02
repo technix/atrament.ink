@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -6,6 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -18,24 +20,24 @@ function HomepageHeader() {
           </div>
           <div className={clsx('col col--9 text--left')}>
             <Heading as="h1" className="hero__title">
-              {siteConfig.title}
+              <Translate id="hero.title">{siteConfig.title}</Translate>
             </Heading>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <p className="hero__subtitle"><Translate id="hero.tagline">{siteConfig.tagline}</Translate></p>
             <div className={styles.buttons}>
               <Link
                 className="button button--secondary button--lg"
                 to="/docs/atrament">
-                📘 Documentation
+                📘 <Translate id="hero.documentation">Documentation</Translate>
               </Link>
               <Link
                 className="button button--secondary button--lg"
                 to="https://technix.github.io/atrament-web-ui">
-                ⏱️ Demo
+                ⏱️ <Translate id="hero.demo">Demo</Translate>
               </Link>
               <Link
                 className="button button--secondary button--lg"
                 to="https://github.com/technix/atrament-web-ui">
-                💻 Source
+                💻 <Translate id="hero.source">Source</Translate>
               </Link>
             </div>
           </div>
@@ -48,9 +50,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Atrament, an Ink-based game engine for interactive fiction">
+    <Layout>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

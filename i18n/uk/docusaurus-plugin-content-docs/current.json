@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Basics": {
+    "message": "Atrament - Basics",
+    "description": "The label for category Atrament - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Basics.link.generated-index.description": {
+    "message": "Basic Atrament concepts.",
+    "description": "The generated-index page description for category Atrament - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Markup": {
+    "message": "Markup",
+    "description": "The label for category Markup in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Markup.link.generated-index.description": {
+    "message": "Page markup elements.",
+    "description": "The generated-index page description for category Markup in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Extras": {
+    "message": "Atrament - Extras",
+    "description": "The label for category Atrament - Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Extras.link.generated-index.description": {
+    "message": "Advanced Atrament features.",
+    "description": "The generated-index page description for category Atrament - Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament API": {
+    "message": "Atrament API",
+    "description": "The label for category Atrament API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament API.link.generated-index.description": {
+    "message": "Atrament internal implementation.",
+    "description": "The generated-index page description for category Atrament API in sidebar tutorialSidebar"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Atrament",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Atrament",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Quick Start": {
+    "message": "Швидкий початок",
+    "description": "Navbar item with label Quick Start"
+  },
+  "item.label.About": {
+    "message": "Про рушій",
+    "description": "Navbar item with label About"
+  },
+  "item.label.Examples": {
+    "message": "Приклади",
+    "description": "Navbar item with label Examples"
+  }
+}

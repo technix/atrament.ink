@@ -4,36 +4,48 @@ sidebar_position: 1
 
 # Швидкий початок
 
-Let's create an Atrament project **in less than 5 minutes**.
+Давайте створимо проєкт на Atrament **всього за 5 хвилин**.
 
-## Getting Started
+## Що вам потрібно
 
-### Що вам потрібно
+- [Node.js](https://nodejs.org/en/download/) версії 22.12 чи вище.
+  - Під час встановлення Node.js рекомендується встановити всі залежності.
 
-- [Node.js](https://nodejs.org/en/download/) версії 22.12 або вище:
-  - Під час встановлення Node.js відмітьте всі залежності.
+## Створюємо проєкт
 
-## Створення проєкту
+Запустіть цю команду, щоб створити новий проєкт на Atrament. Ви можете ввести цю команду в Командному Рядку, Powershell, Терміналі, чи вбудованому терміналі вашого редактора коду.
 
 ```bash
 npx atrament-wizard create my-atrament-game
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Команда задасть вам декілька питань. Натисніть `Enter`, щоб прийняти налаштування за замовчуванням, ви зможете змінити їх пізніше.
 
-The command also installs all necessary dependencies you need to run Atrament.
+Ця команда також встановить всі необхідні залежності для запуску Atrament.
 
-## Run your game
+## Запускаємо гру
 
-Run the development server:
+Запустіть сервер:
 
 ```bash
 cd my-atrament-game
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Atrament project, you'll need to navigate the terminal there.
+Команда `cd` змінює поточний каталог. Для роботи з новоствореним проєктом на Atrament ви маєте перейти в каталог з ним.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+Команда `npm run start` збирає веб-інтерфейс Atrament Web UI і робить його доступним за адресою http://localhost:8900/.
 
-Open `root/game/story.ink` and edit some lines: the game **reloads automatically** and displays your changes.
+## Редагуємо скрипт
+
+Відкрийте файл `root/game/story.ink` і змініть щось в ньому: гра **перезапуститься автоматично** з вашими змінами.
+
+## Публікуємо гру
+
+Щоб опублікувати гру на Atrament у вигляді HTML-сторінки (подібно до веб-експорту Inky чи до експорту Twine), запустіть цю команду в терміналі:
+
+```bash
+npm run build-singlefile
+```
+
+Ваша опублікована гра буде знаходитися в каталозі `build/singlefile`.

@@ -99,12 +99,10 @@ const config = {
             position: 'left',
           },
 */
-/*
           {
             type: 'localeDropdown',
             position: 'right',
           },
-*/
         ],
       },
       footer: {
