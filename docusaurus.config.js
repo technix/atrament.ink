@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Atrament',
-  tagline: 'Ink-based game engine for interactive fiction',
+  tagline: 'A game engine for interactive fiction, powered by Ink',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
