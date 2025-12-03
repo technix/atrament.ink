@@ -6,14 +6,30 @@ sidebar_position: 5
 
 Atrament uses BBCode-style markup tags to modify the text and add interactive elements to Ink text output.
 
-:::warning
-Markup tags work only within s single line of text. Use `<br>` HTML tag for line breaks if you need multiline text inside of markup tags.
+## General tips
+
+### Subsitutions and conditionals
+
+You may use Ink substitutions and conditionals to control markup tags:
+```
+VAR fuel = 10
+// use variable as an attribute value
+[progress value={fuel}]Fuel[/progress] 
+// ...or a function return value
+[progress value={get_current_fuel()}]Fuel[/progress] 
+// use conditionals to add/remove attributes
+[button onclick=refuel {fuel==100:disabled=true}]Refuel[/button] 
+```
+
+### Multiline markup
+
+Markup tags work only within a single line of text. Use `<br>` HTML tag for line breaks if you need multiline text inside of markup tags.
 ```c
 [block width=50%]This is a first line of text.<br>This is a second line.[/block]
 ```
-:::
 
-:::tip
+### Use \<> for readability
+
 You may use a glue operator `<>` to make your markup more readable. It allows you to write your markup in multiple lines - they will be combined into one line when Ink script is processed.
 ```c
 [block width=50%]<>
@@ -21,7 +37,6 @@ You may use a glue operator `<>` to make your markup more readable. It allows yo
   This is a second line.<>
 [/block]
 ```
-:::
 
 ## Layout
 
@@ -141,7 +156,9 @@ There is a [highlight color=\#990000 bgcolor=\#EEEEEE]treasure[/highlight] hidde
 You can show progress bar with a `[progress]` markup teg:
 
 ```c
-[progress value=10]Fuel[/progress]
+VAR fuel=10
+
+[progress value={fuel}]Fuel[/progress]
 ```
 
 By default, progress bar uses 0-100 scale.

@@ -24,7 +24,7 @@ Single file build uses only system fonts to reduce output file size. If you want
 
 ## Web application
 
-To export a game as a progressive web application, run this command in the terminal:
+To export a game as a [progressive web application](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps), run this command in the terminal:
 
 ```bash
 npm run build-web
@@ -37,7 +37,6 @@ To preview your application, run this command in the terminal:
 npm run preview
 ``` 
 The app will be available at http://localhost:4173/.
-
 
 ## Desktop executables
 

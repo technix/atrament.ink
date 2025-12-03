@@ -10,7 +10,7 @@ Atrament enhances Ink scripts with two features: tag handling and additional mar
 
 ### Tags
 
-There are [three types of tags](ink-scripting.md#tags):
+There are [three types of tags](../ink-scripting.md#tags):
 
 - **Global** tags are set at the very beginning of main Ink file. They contain game information (title, author, cover etc.) and global game settings (theme, font, saves etc.)
 - **Paragraph** tags are used to place images and sounds, control the game flow (save/restart), add custom styles, and so on.
@@ -46,14 +46,6 @@ By default, the scene content is displayed all at once. This behavior is control
 
 Scenes are displayed in the continuous way, creating a scrollable text. Authors can clear the scenes list, if needed.
 
-For more details see the [Story](story.md) section.
+For more details see the [Story](./story.md) section.
 
-## Keyboard shortcuts
-
-| Key | Description |
-| :--- | :--- |
-| 1,2,3... | Select corresponding choice option. |
-| Space, Enter | Continue story. |
-| Esc | Show/hide settings dialog. |
-| ~ | (quickly press twice) Open debugger, if enabled. |
 
