@@ -215,7 +215,7 @@ Button can be used to run Ink functions.
 [button onclick=stats]Show stats[/button]
 ```
 
-If function has the text output, it will be displayed in a fullscreen overlay window - see [Overlays](../interface_sections.md#overlays). Otherwise, it updates current overlay window, if any.
+If function has the text output, it will be displayed in a fullscreen overlay window - see [Overlays](./interface_sections.md#overlay). Otherwise, it updates current overlay window, if any.
 
 The `[button]` tag supports the following attributes:
 
