@@ -85,3 +85,38 @@ Atrament supports multiple user sessions for games. To enable this feature, add 
 When sessions are enabled, players will have to choose a game session before starting a game. Each session has its own autosaves, checkpoints, and saves.
 
 Players can delete sessions. When session is deleted, all associated saves are deleted too.
+
+
+## Persistent variables
+
+You can save Ink variables between game restarts - for example, to count how many times player started this game, or to keep player's achievements and high scores.
+
+To define variable as persistent, add the `persist` global tag for each variable you need to save this way:
+
+```c title="story.ink"
+# persist: restarts
+# persist: highscore
+
+VAR restarts = 0
+VAR highscore = 0
+VAR score = 0
+
+~ restarts += 1
+
+You have played this game {restarts} times.
+The high score is {highscore} points.
+
+-> main
+=== main
+Your score is {score} points.
++ [Gain points]
+  ~ score += 1
+  {
+    - score > highscore:
+        You have beaten the high score!
+        ~ highscore = score
+  }
+  -> main
+```
+
+The initial value of the persistent variable, defined in the Ink script, will be overwritten with the saved value if available. Whenever the persistent variable is changed, its value will be saved.

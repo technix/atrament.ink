@@ -2,23 +2,62 @@
 sidebar_position: 1
 ---
 
-# Customization *
+# Customization
 
-
-## Custom CSS classes
+## Styling with CSS
 
 To add custom CSS classes or modify styles of existing elements, edit `resources/styles/custom.css` file. It contains a list of modifiable element classes for reference.
 
+To apply your custom CSS classes to the scenes or choices, use `#CLASS` tag:
+```
+# CLASS: classname
+```
 
-| Tag | Description                |
+To apply custom CSS class or style to the text, use `[css]` markup tag:
+```
+This text is [css class="your_css_class"]styled[/css].
+```
+
+The `[css]` markup tag supports the following attributes:
+
+| Attribute | Description                |
 | :-------- | :------------------------- |
-| `# CLASS: classname` | Apply CSS class to the paragraph `<div>` element. |
-| `# CLASS: classname` | Apply CSS class to the choice `<button>` element. |
+| `css="classname"` | Apply CSS class to the text. |
+| `style="CSS style string"` | Apply CSS style to the text. |
+
+You can provide multiple classes for the element, separating them with space.
+
+This example shows how to define scene classes, choice classes, and text classes.
+
+```css title="resources/styles/custom.css"
+.scene_combat {
+  border: 3px solid #990000;
+  padding: 1em;
+}
+
+.choice_attack {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+```
+
+```c title="root/game/story.ink"
+=== combat
+# CLASS: scene_combat
+Your enemy is [css class="underlined"]waiting[/css].
++ [Attack# CLASS: choice_attack] -> combat_attack
++ [Defend] -> combat_defend
++ [Evade] -> combat_evade
+```
 
 ## Themes
 
 To add a theme to the application, create a JSON file in the `resources/themes` folder with the following structure:
-```
+```json
 {
   "name": "custom",
   "theme": {
@@ -47,13 +86,26 @@ To add a theme to the application, create a JSON file in the `resources/themes` 
 | border-radius | Round the corners of choices, modals, and boxes. |
 | border-radius-inline | Round the corners of inline buttons. |
 
-*Note: You can use any valid CSS values for the theme.*
+:::info
+You can use any valid CSS values for the theme parameters.
+:::
 
 ## Fonts
 
+Atrament is bundled with four fonts: Fira Sans, Lora, Merryweather, and OpenDyslexic. User can switch fonts for the story text, unless they are explicitly defined for some elements.
+
+### Applying font to text
+
+To change font for text, use `[font]` markup tag:
+```
+This text [font=Courier New]uses fixed width font[/font].
+```
+
+### Adding and removing fonts
+
 To add a font to the application, create a folder in the `resources/fonts` folder with the following files:
 * `index.js` with the following content:
-```
+```js
 import('./index.css');
 export default {
   name: 'Font Name',
@@ -64,3 +116,7 @@ export default {
 * font files, referenced in the `index.css`
 
 To remove font from the application, delete the font folder from `resources/fonts`.
+
+
+
+

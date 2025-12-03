@@ -15,8 +15,8 @@
     "message": "Про рушій",
     "description": "Navbar item with label About"
   },
-  "item.label.Examples": {
-    "message": "Приклади",
-    "description": "Navbar item with label Examples"
+  "item.label.Games": {
+    "message": "Ігри",
+    "description": "Navbar item with label Games"
   }
 }

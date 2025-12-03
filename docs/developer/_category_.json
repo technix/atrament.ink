@@ -1,8 +1,8 @@
 {
-  "label": "Atrament API",
+  "label": "For Developers",
   "position": 7,
   "link": {
     "type": "generated-index",
-    "description": "Atrament internal implementation."
+    "description": "Atrament API and extensions"
   }
 }

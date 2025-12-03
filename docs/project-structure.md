@@ -18,6 +18,7 @@ my-atrament-game/
 ├─ src/
 ├─ root/
 │  ├─ game/
+│  ├─ logo.png
 ├─ atrament.config.json
 ```
 
@@ -30,7 +31,6 @@ The files and directories **not** mentioned in the diagram above (`node_modules`
 The game files are located in the `root/game` folder. The file `story.ink` is the main Ink script. You can have multiple Ink files and use `INCLUDE` statement in the `story.ink` to combine them into one.
 
 Media files (images, sounds, music etc.) should be placed to this folder. When you provide a path to them, it should be relative to the `root/game` folder:
-
 
 ```bash title="Directory structure"
 ├─ root/
@@ -47,6 +47,8 @@ Media files (images, sounds, music etc.) should be placed to this folder. When y
 IMAGE: images/intro.jpg
 PLAY_SOUND: sounds/thunder.mp3
 ```
+
+The `logo.png` in the `root` folder is used to create icons for both web and desktop applications. Replace it with your own icon, if you want.
 
 ## Resources
 

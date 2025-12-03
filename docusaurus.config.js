@@ -83,7 +83,7 @@ const config = {
             type: 'doc',
             docId: 'made-with-atrament',
             position: 'left',
-            label: 'Examples',
+            label: 'Games',
           },
 
           /*

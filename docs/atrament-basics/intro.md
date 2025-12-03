@@ -36,6 +36,7 @@ The game is about to begin now.
 [info side=highlight]Check your inventory before continuing.[/info]
 ```
 
+See [Markup](./markup.md) section for details.
 
 ## Scene
 

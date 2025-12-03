@@ -18,3 +18,7 @@ sidebar_position: 8
 ## Tools
 
 * [Dice functions for Ink](https://jon-keevy.itch.io/dice-functions-for-ink)
+
+## Source code
+
+* ["The Coiled Crown" Atrament project](https://github.com/technix/the-coiled-crown)
