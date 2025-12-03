@@ -6,14 +6,14 @@ sidebar_position: 1
 
 ## Styling with CSS
 
-To add custom CSS classes or modify styles of existing elements, edit `resources/styles/custom.css` file. It contains a list of modifiable element classes for reference.
+To add custom CSS classes or modify styles of existing elements, edit the `resources/styles/custom.css` file. It contains a list of modifiable element classes for reference.
 
-To apply your custom CSS classes to the scenes or choices, use `#CLASS` tag:
+To apply your custom CSS classes to the scenes or choices, use the `#CLASS` tag:
 ```
 # CLASS: classname
 ```
 
-To apply custom CSS class or style to the text, use `[css]` markup tag:
+To apply a custom CSS class or style to the text, use `[css]` markup tag:
 ```
 This text is [css class="your_css_class"]styled[/css].
 ```
@@ -25,7 +25,7 @@ The `[css]` markup tag supports the following attributes:
 | `css="classname"` | Apply CSS class to the text. |
 | `style="CSS style string"` | Apply CSS style to the text. |
 
-You can provide multiple classes for the element, separating them with space.
+You can provide multiple classes for the element, separating them with a space.
 
 This example shows how to define scene classes, choice classes, and text classes.
 
@@ -92,13 +92,13 @@ You can use any valid CSS values for the theme parameters.
 
 ## Fonts
 
-Atrament is bundled with four fonts: Fira Sans, Lora, Merryweather, and OpenDyslexic. User can switch fonts for the story text, unless they are explicitly defined for some elements.
+Atrament is bundled with four fonts: Fira Sans, Lora, Merryweather, and OpenDyslexic. The user can switch fonts for the story text, unless they are explicitly defined for some elements.
 
 ### Applying font to text
 
 To change font for text, use `[font]` markup tag:
 ```
-This text [font=Courier New]uses fixed width font[/font].
+This text [font=Courier New]uses fixed-width font[/font].
 ```
 
 ### Adding and removing fonts
@@ -113,10 +113,6 @@ export default {
 };
 ```
 * `index.css`, which includes corresponding `@font-face` directives
-* font files, referenced in the `index.css`
+* font files, referenced in the `index.css`.
 
-To remove font from the application, delete the font folder from `resources/fonts`.
-
-
-
-
+To remove a font from the application, delete the font folder from `resources/fonts`.

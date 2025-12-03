@@ -8,7 +8,7 @@ Atrament uses BBCode-style markup tags to modify the text and add interactive el
 
 ## General tips
 
-### Subsitutions and conditionals
+### Substitutions and conditionals
 
 You may use Ink substitutions and conditionals to control markup tags:
 ```
@@ -23,17 +23,17 @@ VAR fuel = 10
 
 ### Multiline markup
 
-Markup tags work only within a single line of text. Use `<br>` HTML tag for line breaks if you need multiline text inside of markup tags.
+Markup tags work only within a single line of text. Use the `<br>` HTML tag for line breaks if you need multiline text inside of markup tags.
 ```c
 [block width=50%]This is a first line of text.<br>This is a second line.[/block]
 ```
 
 ### Use \<> for readability
 
-You may use a glue operator `<>` to make your markup more readable. It allows you to write your markup in multiple lines - they will be combined into one line when Ink script is processed.
+You may use a glue operator `<>` to make your markup more readable. It allows you to write your markup in multiple lines - they will be combined into one line when the Ink script is processed.
 ```c
 [block width=50%]<>
-  This is a first line of text.<br><>
+  This is the first line of text.<br><>
   This is a second line.<>
 [/block]
 ```
@@ -43,7 +43,7 @@ You may use a glue operator `<>` to make your markup more readable. It allows yo
 
 ### Blocks
 
-You can use `[block]` markup tag to change text appearance. Blocks can have specified width and text alignment. Several blocks in a row are displayed as one row, so you can create multi-column layout.
+You can use the `[block]` markup tag to change text appearance. Blocks can have a specified width and text alignment. Several blocks in a row are displayed as one row, so you can create a multi-column layout.
 
 ```c
 // example of a two-column layout
@@ -70,7 +70,7 @@ Tables can be created with these markup tags:
 ```
 
 :::warning
-Please note glue operator `<>` at the end of each table line - this is required to render the table properly.
+Please note the lue operator `<>` at the end of each table line - this is required to render the table properly.
 :::
 
 The table consists of header `[header][/header]` (optional) and rows `[row][/row]`. The `[ ]` tag is a cell separator.
@@ -81,8 +81,8 @@ The `[table]` markup tag supports the following attributes:
 | :-------- | :------------------------- |
 | `border=false` | Disable table borders. |
 | `padding=false` | Disable table cell paddings. Useful if you want to combine images with a table. |
-| `columns="20% 20% 60%"` | Set column width. You have to set width for each column in the table. |
-| `fixed=true` | Force text wrapping in the cells, so columns always have fixed width. |
+| `columns="20% 20% 60%"` | Set column width. You have to set a width for each column in the table. |
+| `fixed=true` | Force text wrapping in the cells, so columns always have a fixed width. |
 
 
 ## Presentation
@@ -125,12 +125,12 @@ For hidden text use `[spoiler]` markup tag:
 To defeat a dragon, you need to [spoiler]fight it with your bare hands.[/spoiler]
 ```
 
-When user clicks on a spoiler text, it will be displayed. Second click hides it again.
+When the user clicks on a spoiler text, it will be displayed. The second click hides it again.
 
 
 ### Highlight
 
-To highlight specific text, use `[highlight]` markup tag. Text is highlighted with accent color.
+To highlight specific text, use `[highlight]` markup tag. Text is highlighted with an accent color.
 
 ```c
 There is a [highlight]treasure[/highlight] hidden in this cave. 
@@ -161,7 +161,7 @@ VAR fuel=10
 [progress value={fuel}]Fuel[/progress]
 ```
 
-By default, progress bar uses 0-100 scale.
+By default, the progress bar uses a 0-100 scale.
 
 The `[progress]` tag supports the following attributes:
 
@@ -195,14 +195,14 @@ Visit [url=http:\/\/atrament.ink/]Atrament[/url] web site.
 ```
 
 :::warning
-Because `//` is a commentary in Ink, you have to escape double slashes in the URL, i.e. `http://` becomes `http:\/\/`.
+Because `//` is a commentary in Ink, you have to escape double slashes in the URL, i.e., `http://` becomes `http:\/\/`.
 :::
 
 ## Interaction
 
 ### Input
 
-To create an input field, use `[input]` markup tag and link variable to it:
+To create an input field, use `[input]` markup tag and link a variable to it:
 
 ```
 VAR character_name="John Doe"
@@ -214,14 +214,14 @@ Enter your name:
 The character name is "{character_name}".
 ```
 
-The input field shows current value of the linked variable. The value of the variable changes as user types.
+The input field shows the current value of the linked variable. The value of the variable changes as the user types.
 
 The `[input]` tag supports the following attributes:
 
 | Attribute | Description                |
 | :-------- | :------------------------- |
 | `var=your_variable` | Mandatory. Name of the variable to save the entered value. |
-| `type=text` | Input type. Can be set to `text` (default) or `number`. If `type` is set to `number`, the value will be passed to the variable as number. |
+| `type=text` | Input type. Can be set to `text` (default) or `number`. If `type` is set to `number`, the value will be passed to the variable as a number. |
 | `placeholder=Your name` | A placeholder text for input. Displayed if the input value is empty.
 
 ### Button
@@ -232,13 +232,13 @@ Button can be used to run Ink functions.
 [button onclick=stats]Show stats[/button]
 ```
 
-If function has the text output, it will be displayed in a fullscreen overlay window - see [Overlays](./interface_sections.md#overlay). Otherwise, it updates current overlay window, if any.
+If the function has the text output, it will be displayed in a full-screen overlay window - see [Overlays](./interface_sections.md#overlay). Otherwise, it updates the current overlay window, if any.
 
 The `[button]` tag supports the following attributes:
 
 | Attribute | Description                |
 | :-------- | :------------------------- |
-| `onclick=your_function` | Mandatory. Name of the function to be called when button is clicked. This function can't take parameters. |
+| `onclick=your_function` | Mandatory. Name of the function to be called when the button is clicked. This function can't take parameters. |
 | `disabled=true` | If set, the button is disabled and can't be clicked. |
-| `bordered=false` | Don't show button borders. Useful if you use inline image `[img]` as a button content. |
-| `display=modal` | If set, the button displays modal overlay instead of fullscreen. |
+| `bordered=false` | Don't show button borders. Useful if you use an inline image `[img]` as a button content. |
+| `display=modal` | If set, the button displays a modal overlay instead of full-screen. |

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Introduction to Ink
 
-Ink is a scripting language, designed for interactive scripts. It provides a text flow with choices and rich features for dynamic text generation.
+Ink is a scripting language designed for interactive scripts. It provides a text flow with choices and rich features for dynamic text generation.
 
 Atrament uses Ink to describe the game flow and control the story presentation.
 
@@ -12,9 +12,9 @@ Atrament uses Ink to describe the game flow and control the story presentation.
 
 ```c
 // this is a comment
-This is a paragraph text.
+This is a paragraph of text.
 * Choice 1
-    // choices with * will disappear, when we visit this paragraph again
+    // choices with * will disappear when we visit this paragraph again
     You have selected choice 1.
 + Choice 2
     // choices with + are always available
@@ -22,7 +22,7 @@ This is a paragraph text.
 - // this is a "gather" - text flow continues here
 Story continues.
 
-// The glue symbol, "<>", combines multiline string into a single one
+// The glue symbol, "<>", combines a multiline string into a single one
 This text
 <> is displayed
 <> as a single line.
@@ -38,7 +38,7 @@ By default, Ink displays the text of the chosen choice as a part of the next par
 
 ## Knots and stitches
 
-Knots are named sections of your script - you can reference them in your diverts and conditions. Stitches are named sections inside of knots - you can reference them by name within the knot, but need to use full name when referencing them from outside the knot.
+Knots are named sections of your script - you can reference them in your diverts and conditions. Stitches are named sections inside of knots - you can reference them by name within the knot, but need to use the full name when referencing them from outside the knot.
 
 ```c
 // This is a divert to a knot - normal Ink flow does not enter the knots.
@@ -50,11 +50,11 @@ Text content of the first knot.
 + [Choice 2] -> stitch_2
 
 = stitch_1
-First choice was selected.
+The first choice was selected.
 -> knot_2.stitch_2 // redirect to a specific stitch in another knot
 
 = stitch_2
-Second choice was selected.
+The second choice was selected.
 -> knot_2 // redirect to a knot
 
 === knot_2
@@ -94,13 +94,13 @@ Constants are the same as variables, but their value can't be changed.
 // define a constant
 CONST GOLD_COIN_VALUE = 100
 
-// use constant in the game
+// use a constant in the game
 This sword costs {5 * GOLD_COIN_VALUE} coins.
 ```
 
 ## Conditions
 
-You may use conditions to change text and show/hide choices. Conditions can involve variables and knot or stitch names (they are boolean variables with are set to `true` after visiting them).
+You may use conditions to change text and show/hide choices. Conditions can involve variables and knot or stitch names (they are boolean variables that are set to `true` after visiting them).
 
 ### Conditional text
 
@@ -157,7 +157,7 @@ VAR weapon = "sword"
     -> story
 ```
 
-Knot and stitch names are boolean variables with are set to `true` after visiting them, so you can use:
+Knot and stitch names are boolean variables that are set to `true` after visiting them, so you can use:
 
 ```c
 * { not visit_kyiv } [Visit Kyiv] -> visit_kyiv
@@ -175,14 +175,14 @@ You may use complex conditions with AND (`&&`, `and`) and OR (`||`, `or`):
 
 ## Functions
 
-Functions are basically a named knots with special syntax. They can take arguments, return values, and display text.
+Functions are basically named knots with special syntax. They can take arguments, return values, and display text.
 
 ```c
 VAR coins = 0
 -> story
 
 === function coins_change(amount)
-  // this function changes value
+  // this function changes the value
   ~ coins = coins + amount
 
 === function show_coins()
@@ -200,7 +200,7 @@ VAR coins = 0
 
 === story
 // show_coins function displays text, so when
-// the function is called the text will be shown
+// the function is called, the text will be shown
 ~ show_coins()
 Make your choice:
 + [Gain 1 coin]
@@ -222,7 +222,7 @@ Make your choice:
 
 ## Tags
 
-Tags in Ink allow to provide instructions to an outer application.
+Tags in Ink can provide instructions to an outer application.
 
 ```c title="story.ink"
 // global tags are defined at the very beginning
@@ -259,10 +259,10 @@ What will be your choice?
 
 ## Multiple Ink files
 
-If your story becomes too big, you can split it into multiple files. One of them becomes main and have to contain `INCLUDE` statements. When Ink script is compiled, these `INCLUDE` statements are replaced with the content of the included files.
+If your story becomes too big, you can split it into multiple files. One of them becomes the main story file and has to contain `INCLUDE` statements. When Ink script is compiled, these `INCLUDE` statements are replaced with the content of the included files.
 
 :::warning
-The INCLUDE statements have to be at the very top of the file, immediately after global tags.
+The INCLUDE statements must be at the very top of the file, immediately after global tags.
 :::
 
 ```c title="story.ink"
@@ -297,7 +297,7 @@ Text content of the second knot.
 
 ## Advanced topics
 
-Ink has much more features: conditional content, threads, lists etc. Refer to official Ink documentation, "[Writing with Ink](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md)", on their syntax and usage.
+Ink has many more features: conditional content, threads, lists, etc. Refer to official Ink documentation, "[Writing with Ink](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md)", on their syntax and usage.
 
 ## More documentation
 

@@ -18,7 +18,7 @@ npm run build-singlefile
 The resulting web page files will be in the `build/singlefile` folder.
 
 :::tip
-Single file build uses only system fonts to reduce output file size. If you want to include all fonts from the `resources/fonts` folder, use `npm run build-singlefile -- -- --embed-fonts` command to build the game.
+Single-file build uses only system fonts to reduce output file size. If you want to include all fonts from the `resources/fonts` folder, use the `npm run build-singlefile -- -- --embed-fonts` command to build the game.
 :::
 
 
@@ -30,7 +30,7 @@ To export a game as a [progressive web application](https://developer.mozilla.or
 npm run build-web
 ```
 
-The resulting web application files will be in `build/web` folder. 
+The resulting web application files will be in the `build/web` folder. 
 
 To preview your application, run this command in the terminal:
 ```bash
@@ -45,14 +45,14 @@ Atrament uses [NeutralinoJS](https://neutralino.js.org/) to create executables f
 :::
 
 
-To build standalone executables for Windows, Linux, and MacOS, run this command in the terminal:
+To build standalone executables for Windows, Linux, and macOS, run this command in the terminal:
 
 ```
 npm run build-standalone
 ```
 
 :::warning
-On first run, this command downloads NeutralinoJS build toolchain, so internet connection is required.
+On first run, this command downloads NeutralinoJS build toolchain, so an internet connection is required.
 :::
 
 

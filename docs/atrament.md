@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # What is Atrament
 
-Atrament is a modular tool to create text games or interactive fiction stories for web and desktop. It uses [Ink](https://www.inklestudios.com/ink/) as a scripting language and JavaScript+CSS as a runtime and presentation layer.
+Atrament is a modular tool to create text games or interactive fiction stories for the web and desktop. It uses [Ink](https://www.inklestudios.com/ink/) as a scripting language and JavaScript+CSS as a runtime and presentation layer.
 
 Most of this documentation describes how to create games with Atrament Web UI.
 
@@ -12,7 +12,7 @@ Most of this documentation describes how to create games with Atrament Web UI.
 
 Atrament consists of several JS libraries and applications: Atrament Core, Atrament Web, Atrament Web UI, and Atrament Wizard.
 
-The easiest way to create your own game with Atrament is to use Atrament Web UI - it provides a ready-to-use game engine with various features. However, experienced developers can use Atrament Web library as a part of their web application, or Atrament Core if they want to create a NodeJS application or use their own set of libraries.
+The easiest way to create your own game with Atrament is to use Atrament Web UI - it provides a ready-to-use game engine with various features. However, experienced developers can use the Atrament Web library as a part of their web application, or Atrament Core if they want to create a NodeJS application or use their own set of libraries.
 
 
 ### Atrament Core
@@ -25,14 +25,14 @@ The easiest way to create your own game with Atrament is to use Atrament Web UI 
 
 ### Atrament Web UI
 
-**Atrament Web UI** a web application written in `preact` (React-like web framework), which can be used to create feature-rich games for both web and desktop:
+**Atrament Web UI** is a web application written in `preact` (React-like web framework), which can be used to create feature-rich games for both web and desktop:
 
 * manages game sessions, saves, loads, and checkpoints;
-* custom markup: blocks, tables, info boxes, headers, progress bars, click-to-continue etc;
+* custom markup: blocks, tables, info boxes, headers, progress bars, click-to-continue, etc;
 * additional interactive elements: buttons, inputs;
-* extra screens like inventory, character stats etc. can be created with overlays;
+* extra screens like inventory, character stats, etc. can be created with overlays;
 * multimedia support: images, background, sound, music, and video;
-* story debugger: you can watch and edit variables, run Ink functions etc;
+* story debugger: you can watch and edit variables, run Ink functions, etc;
 * customizable themes, fonts, and CSS styles;
 * export game as a web application (with PWA support), single HTML-file (Twine-like), or as an executable for desktop OS
 

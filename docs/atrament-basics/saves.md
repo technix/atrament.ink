@@ -8,9 +8,9 @@ Atrament supports autosaves, checkpoints, and user saves.
 
 ## Autosave
 
-By default, Atrament saves game progress after each choice. If autosave is present for the game, player can continue playing by clicking "Continue" in the main menu.
+By default, Atrament saves game progress after each choice. If autosave is present for the game, the player can continue playing by clicking "Continue" in the main menu.
 
-To disable autosave feature, add `#autosave` global tag to your script and set it to `false`:
+To disable the autosave feature, add `#autosave` global tag to your script and set it to `false`:
 
 ```c
 # autosave: false
@@ -28,7 +28,7 @@ To save the game to a checkpoint, use `#CHECKPOINT` knot tag:
 The story goes on.
 ```
 
-Later, you can restore the game from a checkpoint - i.e. load saved state of the game:
+Later, you can restore the game from a checkpoint - i.e., load the saved state of the game:
 
 ```c
 Unfortunately, you lost this battle.
@@ -42,7 +42,7 @@ You can have multiple checkpoints by naming them:
 ```c
 === story2
 # CHECKPOINT: level1
-You are entering first level of the dungeon.
+You are entering the first level of the dungeon.
 ```
 
 And restart the game from a specified checkpoint:
@@ -84,14 +84,14 @@ Atrament supports multiple user sessions for games. To enable this feature, add 
 
 When sessions are enabled, players will have to choose a game session before starting a game. Each session has its own autosaves, checkpoints, and saves.
 
-Players can delete sessions. When session is deleted, all associated saves are deleted too.
+Players can delete sessions. When a session is deleted, all associated saves are deleted too.
 
 
 ## Persistent variables
 
-You can save Ink variables between game restarts - for example, to count how many times player started this game, or to keep player's achievements and high scores.
+You can save Ink variables between game restarts - for example, to count how many times the player started this game, or to keep the player's achievements and high scores.
 
-To define variable as persistent, add the `persist` global tag for each variable you need to save this way:
+To define a variable as persistent, add the `persist` global tag for each variable you need to save this way:
 
 ```c title="story.ink"
 # persist: restarts

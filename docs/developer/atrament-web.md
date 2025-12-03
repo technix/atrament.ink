@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Atrament Web
 
-Atrament Web is a browser build of Atrament Core. It is bundled with a specific set of interface implementations:
+Atrament Web is a ready-to-use build of Atrament Core for the web browser. It is bundled with a specific set of interface implementations:
 
 - loader: fetch + fflate
 - persistent: [localForage](https://github.com/localForage/localForage) / Neutralinojs storage
@@ -12,7 +12,7 @@ Atrament Web is a browser build of Atrament Core. It is bundled with a specific 
 - sound: [howler.js](https://github.com/goldfire/howler.js)
 - platform: web / Neutralinojs
 
-The library detect environment to define which interface to use for persistent storage and platform features.
+The library detects the environment to define which interface to use for persistent storage and platform features.
 
 ## Usage
 
@@ -40,7 +40,7 @@ const gameState = useStore(atrament.store);
 
 ## Loading progress tracking
 
-In addition to standard loader methods, Atrament Web provides `onProgress` handler to track download progress:
+In addition to standard loader methods, Atrament Web provides an `onProgress` handler to track download progress:
 ```js
 function progressTracker({ percent, receivedLength, totalLength}) {
   console.log(`Downloaded ${receivedLength} out of ${totalLength} (${percent})%`);

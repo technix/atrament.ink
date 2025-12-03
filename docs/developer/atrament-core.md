@@ -32,9 +32,9 @@ atrament.defineInterfaces({
 ### atrament.init(Story, configuration)
 
 Initialize the game engine. Takes two parameters:
-- **Story** is an inkjs constructor, imported directly from inkjs
+- **Story** is an InkJS constructor, imported directly from InkJS
 - **configuration** is a configuration object:
-    - **applicationID** should be a unique string. It is used to distinguish persistent storage of your application.
+    - **applicationID** should be a unique string. It is used to distinguish the persistent storage of your application.
     - **settings** is a default settings object. These settings are immediately applied.
 
 ```
@@ -61,11 +61,11 @@ atrament.on('*', (event, args) => { ... });
 
 ### atrament.off(event, listener)
 
-Unsubscribe specified listener from the Atrament event.
+Unsubscribe the specified listener from the Atrament event.
 
 ### atrament.state
 
-Returns Atrament state interface. Can be used to operate state directly:
+Returns the Atrament state interface. Can be used to operate the state directly:
 
 ```
 atrament.state.setSubkey('game', 'checkpoint', true);
@@ -95,29 +95,29 @@ Initialize game object. It is required to perform operations with saves.
 Parameters:
 - path: path to Ink file
 - file: Ink file name
-- gameID: optional. If provided, Atrament will use the given ID for save management. Otherwise, it will be generated based on path and filename.
+- gameID: optional. If provided, Atrament will use the given ID for save management. Otherwise, it will be generated based on the path and filename.
 
 Event: `'game/init', { pathToInkFile: path, inkFile: file }`
 
 
 ### async atrament.game.initInkStory()
 
-Load Ink file and initialize Ink Story object. Then it updates game metadata and initializes variable observers.
+Load the Ink file and initialize the Ink Story object. Then it updates game metadata and initializes variable observers.
 
 Event: `'game/initInkStory'`
 
 ### atrament.game.getSaveSlotKey(\{ name, type \})
 
-Returns save slot identifier for given save name and type.
+Returns the save slot identifier for the given save name and type.
 Possible save types: `atrament.game.SAVE_GAME`, `atrament.game.SAVE_CHECKPOINT`, `atrament.game.SAVE_AUTOSAVE`. For autosaves, the `name` parameter should be omitted.
 The returned value can be used as a `saveslot` parameter.
 
 
 ### async atrament.game.start(saveslot)
 
-If the game is started for the first time, or the initialized game is not the same as the current one - call `initInkStory` first.
-Clears game state, and gets initial data for variable observers.
-If `saveslot` is defined, load state from specified save.
+If the game is started for the first time, or the initialized game is not the same as the current one, call `initInkStory` first.
+Clears the game state and gets initial data for variable observers.
+If `saveslot` is defined, load state from the specified save.
 
 Event: `'game/start', { saveSlot: saveslot }`
 
@@ -132,7 +132,7 @@ Event: `'game/resume', { saveSlot: saveslot }`
 
 ### async atrament.game.canResume()
 
-Returns save slot identifier if game can be resumed.
+Returns the save slot identifier if the game can be resumed.
 
 Event: `'game/canResume', { saveSlot: saveslot }`
 
@@ -148,7 +148,7 @@ Run `atrament.game.restart`, then run `atrament.game.continueStory()` to regener
 
 ### async atrament.game.load(saveslot)
 
-Load game state from specified save slot. 
+Load game state from the specified save slot. 
 
 Event: `'game/load', saveslot`
 
@@ -166,32 +166,32 @@ Event: `'game/save', { type: 'checkpoint', name }`
 
 ### async atrament.game.saveAutosave()
 
-Save the game state to autosave slot.
+Save the game state to the autosave slot.
 
 Event: `'game/save', { type: 'autosave' }`
 
 ### async atrament.game.listSaves()
 
-Returns array of all existing saves for active game.
+Returns an array of all existing saves for the active game.
 
 Event: `'game/listSaves', savesListArray`
 
 ### async atrament.game.removeSave(saveslot)
 
-Removes specified game save slot.
+Removes the specified game save slot.
 
 Event: `'game/removeSave', saveslot`
 
 ### async atrament.game.existSave(saveslot)
 
-Returns `true` if specified save slot exists.
+Returns `true` if the specified save slot exists.
 
 ### atrament.game.continueStory()
 
 - gets Ink scene content
 - run scene processors
 - process tags
-- updates Atrament state with a scene content
+- updates the Atrament state with the scene content
 
 Event: `'game/continueStory'`
 
@@ -216,7 +216,7 @@ atrament.game.defineSceneProcessor(processCheckpoint);
 
 ### atrament.game.getAssetPath(file)
 
-Returns the full path to asset file (image, sound, music).
+Returns the full path to the asset file (image, sound, music).
 
 ### atrament.game.clear()
 
@@ -226,23 +226,23 @@ Event: `'game/clear'`
 
 ### atrament.game.reset()
 
-Method to call at the game end. It calls `atrament.game.clear()`, then clears `metadata` and `game` in Atrament state.
+Method to call at the game end. It calls `atrament.game.clear()`, then clears `metadata` and `game` in the Atrament state.
 
 Event: `'game/reset'`
 
 ### atrament.game.getSession()
 
-Returns current game session.
+Returns the current game session.
 
 ### atrament.game.setSession(sessionID)
 
-Sets current game session. If set to empty value, reset session ID to default.
+Sets the current game session. If set to an empty value, reset the session ID to the default.
 
 Event: `'game/setSession', sessionID`
 
 ### async atrament.game.getSessions()
 
-Returns list of existing sessions in a `{ sessionName: numberOfSaves, ... }` format.
+Returns a list of existing sessions in a `{ sessionName: numberOfSaves, ... }` format.
 
 Event: `'game/getSessions', sessionList`
 
@@ -254,7 +254,7 @@ Event: `'game/deleteSession', sessionID`
 
 ### atrament.game.getState()
 
-Get state object for the game (ink state, "game" and "scenes" state keys)
+Get state object for the game (ink state, "game", and "scenes" state keys)
 
 ### atrament.game.setState(gameState)
 
@@ -271,7 +271,7 @@ Event: `'ink/initStory'`
 
 ### atrament.ink.story()
 
-Returns current Story instance.
+Returns the current Story instance.
 
 ### atrament.ink.loadState(state)
 
@@ -279,7 +279,7 @@ Load Ink state from JSON.
 
 ### atrament.ink.getState()
 
-Returns current Ink state as JSON object.
+Returns the current Ink state as a JSON object.
 
 ### atrament.ink.makeChoice(id)
 
@@ -307,7 +307,7 @@ Event: `'ink/getGlobalTags', { globalTags: globalTagsObject }`
 
 ### atrament.ink.getVariable(variableName)
 
-Returns value of specified Ink variable.
+Returns the value of the specified Ink variable.
 
 Event: `'ink/getVariable', { name: variableName }`
 
@@ -319,7 +319,7 @@ Event: `'ink/getVariables', inkVariablesObject`
 
 ### atrament.ink.setVariable(variableName, value)
 
-Sets value of specified Ink variable.
+Sets the value of the specified Ink variable.
 
 Event: `'ink/setVariable', { name: variableName, value: value }`
 
@@ -348,13 +348,13 @@ Event: `'ink/getScene', { scene: sceneObject }`
 
 ## Settings methods
 
-Application settings for your application. Loading, saving, and setting values changes the `settings` section of the Atrament state.
+Application settings for your application. Loading, saving, and setting values change the `settings` section of the Atrament state.
 
-However, if you need to perform additional actions when the setting is changed, you can define a handler for it - see below. By default, Atrament handles `mute` and `volume` settings this way, muting and setting sound volume respectively.
+However, if you need to perform additional actions when the setting is changed, you can define a handler for it - see below. By default, Atrament handles `mute` and `volume` settings this way, muting and setting sound volume, respectively.
 
 ### async atrament.settings.load()
 
-Load settings from persistent storage to Atrament state.
+Load settings from persistent storage to the Atrament state.
 
 Event: `'settings/load'`
 
@@ -366,13 +366,13 @@ Event: `'settings/save'`
 
 ### atrament.settings.get(parameter)
 
-Returns value of the setting.
+Returns the value of the setting.
 
 Event: `'settings/get', { name: parameter }`
 
 ### atrament.settings.set(parameter, value)
 
-Sets value of setting.
+Sets the value of the setting.
 
 Event: `'settings/set', { name: parameter, value: value }`
 
@@ -384,7 +384,7 @@ Toggles setting (sets `true` to `false` and vice versa).
 
 Defines a settings handler. 
 
-For example, you have to run some JavaScript code to toggle fullscreen mode in your app.
+For example, you have to run some JavaScript code to toggle full-screen mode in your app.
 
 ```js
 const fullscreenHandler = (oldValue, newValue) => {
@@ -471,12 +471,12 @@ Please note that `metadata` and `vars` from the Atrament state are not included 
 
 ## Interfaces
 
-`atrament-core` uses dependency injection. It uses inkjs `Story` constructor 'as-is', and uses custom interfaces for other libraries.
+`atrament-core` uses dependency injection. It uses InkJS `Story` constructor 'as-is', and uses custom interfaces for other libraries.
 
 There are four interfaces in `atrament-core`. Their implementation is not included, so developers can use `atrament-core` with the libraries they like. 
 
 ### loader
-Interface to file operations. The function `init` will be called first, taking the path to the game as a parameter. The function `getAssetPath` should return the full path of a given file. The async function `loadInk` should return the content of a given Ink file, located in the folder defined at the initialization time.
+Interface to file operations. The function `init` will be called first, taking the path to the game as a parameter. The function `getAssetPath` should return the full path of a given file. The async function `loadInk` should return the content of a given Ink file, located in the folder defined at initialization time.
 
 ```js
 {

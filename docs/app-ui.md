@@ -12,7 +12,7 @@ The web application has three screens:
 
 ### Application menu
 
-Clicking `≡` screen button displays the application menu. It can contain different sections depending on game configuration and current screen:
+Clicking the `≡` screen button displays the application menu. It can contain different sections depending on the game configuration and the current screen:
 - load game menu (if saves are enabled)
 - save game menu (if saves are enabled)
 - settings: full screen mode, animations, sound volume, font face and size, and color theme.
@@ -21,7 +21,7 @@ Clicking `≡` screen button displays the application menu. It can contain diffe
 
 | Key | Description |
 | :--- | :--- |
-| 1,2,3... | Select corresponding choice option. |
+| 1,2,3... | Select the corresponding choice option. |
 | Space, Enter | Continue story. |
 | Esc | Show/hide application menu. |
 | ~ | (quickly press twice) Open debugger, if enabled. |

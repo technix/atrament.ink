@@ -12,7 +12,7 @@ Atrament enhances Ink scripts with two features: tag handling and additional mar
 
 There are [three types of tags](../ink-scripting.md#tags):
 
-- **Global** tags are set at the very beginning of main Ink file. They contain game information (title, author, cover etc.) and global game settings (theme, font, saves etc.)
+- **Global** tags are set at the very beginning of the main Ink file. They contain game information (title, author, cover, etc.) and global game settings (theme, font, saves, etc.)
 - **Paragraph** tags are used to place images and sounds, control the game flow (save/restart), add custom styles, and so on.
 - **Choice** tags are used to disable choices and add custom styles.
 
@@ -42,10 +42,8 @@ See [Markup](./markup.md) section for details.
 
 A "scene" in Atrament is all the content between choices. It can have multiple paragraphs of text.
 
-By default, the scene content is displayed all at once. This behavior is controlled by `continue_maximally` global tag. 
+By default, the scene content is displayed all at once. This behavior is controlled by the `continue_maximally` global tag. 
 
-Scenes are displayed in the continuous way, creating a scrollable text. Authors can clear the scenes list, if needed.
+Scenes are displayed continuously, creating a scrollable text. Authors can clear the scenes list if needed.
 
-For more details see the [Story](./story.md) section.
-
-
+For more details, see the [Story](./story.md) section.

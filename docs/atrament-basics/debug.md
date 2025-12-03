@@ -4,14 +4,14 @@ sidebar_position: 9
 
 # Debugging
 
-To enable debugger, set global tag `#debug` in your main ink script:
+To enable the debugger, set the global tag `#debug` in your main Ink script:
 
 ```c title="story.ink"
 # title: Your Story
 # debug
 ```
 
-The debugger window opens when you double press `~` key, or click the debugger button on the screen.
+The debugger window opens when you double-press the `~` key or click the debugger button on the screen.
 
 ## Sections
 
@@ -31,11 +31,11 @@ To edit the variable, click on its value. Edit the value, then click `>` to save
 
 ### Visits
 
-Shows visited story paths and count of visits.
+Shows visited story paths and the count of visits.
 
 ### Functions
 
-To run an Ink function, enter its name to 'Run function' input, then enter its arguments into 'Arguments' input, and click `>>>` to see the output.
+To run an Ink function, enter its name into the 'Run function' input, then enter its arguments into the 'Arguments' input, and click `>>>` to see the output.
 
 Arguments should be JSON-formatted. For example, to run this function:
 ```c
@@ -52,6 +52,6 @@ input these values into form fields:
 
 ### Navigation
 
-Enter the path value into "Go to path:" input and click `>>>` button. The game will go to the path specified and continue from there.
+Enter the path value into the "Go to path:" input and click the `>>>` button. The game will go to the path specified and continue from there.
 
-You can see the valid path examples in the **Visits** sections. Knots are referenced by name: `knot_name`, stitches are referenced by knot and stitch name, separated with dot: `knot_name.stitch_name`.
+You can see the valid path examples in the **Visits** sections. Knots are referenced by name: `knot_name`, stitches are referenced by knot and stitch name, separated with a dot: `knot_name.stitch_name`.

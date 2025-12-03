@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Appearance
 
-To change the choice appearance, use `#choices` global tag with a combination of attributes:
+To change the choice appearance, use the `#choices` global tag with a combination of attributes:
 
 | Attribute | Description                |
 | :-------- | :------------------------- |
@@ -22,12 +22,12 @@ To change the choice appearance, use `#choices` global tag with a combination of
 
 ## Shuffled choices
 
-You can display choices in random order with `#SHUFFLE_CHOICES` knot tag, this can be useful for puzzles. The tag is applied to the choices immediately after current scene.
+You can display choices in random order with the `#SHUFFLE_CHOICES` knot tag; this can be useful for puzzles. The tag is applied to the choices immediately after the current scene.
 
 ```c
 === guess_the_color
 # SHUFFLE_CHOICES
-What is the color of grass and leaves?
+What is the color of the grass and leaves?
 + [Red] -> wrong_choice
 + [Orange] -> wrong_choice
 + [Yellow] -> wrong_choice
@@ -38,11 +38,11 @@ What is the color of grass and leaves?
 
 ## Prompt
 
-You can display choice prompt before the choices, using `#PROMPT` knot tag. The tag is applied to the choices immediately after current scene.
+You can display a choice prompt before the choices, using the `#PROMPT` knot tag. The tag is applied to the choices immediately after the current scene.
 
 ```c
 === combat
-// this text will be shown above choices
+// this text will be shown above the choices
 # PROMPT: Choose your action:
 Your enemy is waiting.
 + [Attack] -> combat_attack
@@ -52,7 +52,7 @@ Your enemy is waiting.
 
 ## Disabled choices
 
-Instead of hiding choice based on condition, you can make it unclickable with `#UNCLICKABLE` choice tag (alternate syntax: `#DISABLED`, `#INACTIVE`). The choice will be displayed as disabled, and users will not be able to choose it.
+Instead of hiding a choice based on a condition, you can make it unclickable with the `#UNCLICKABLE` choice tag (alternate syntax: `#DISABLED`, `#INACTIVE`). The choice will be displayed as disabled, and users will not be able to choose it.
 
 ```c
 VAR weapon = "sword"
@@ -76,23 +76,23 @@ VAR weapon = "sword"
 
 ## Click to continue
 
-A single choice with text `>>>` is treated as "click to continue". Choice list is not shown, and player can continue story by clicking the screen or pressing "Space" or "Enter" key. After 3 seconds of inactivity, animated hint is displayed in the bottom of the screen.
+A single choice with text `>>>` is treated as "click to continue". The choice list is not shown, and the player can continue the story by clicking the screen or pressing the "Space" or "Enter" key. After 3 seconds of inactivity, an animated hint is displayed at the bottom of the screen.
 
 ```
-This story will proceed when user clicks screen.
+This story will proceed when the user clicks the screen.
 + [>>>] -> next_knot
 ```
 
-You can also provide a delay in **seconds** for the "click to continue". A timed choice is presented as a slightly different circular button. After the delay, story continues automatically.
+You can also provide a delay in **seconds** for the "click to continue". A timed choice is presented as a slightly different circular button. After the delay, the story continues automatically.
 ```
-This story will proceed either after user clicks screen or after 3 seconds.
+This story will proceed either after the user clicks the screen or after 3 seconds.
 + [>>>3] -> next_knot
 ```
 
 Click-to-continue choice can be configured:
-* `clickable` - pause before the choice becomes clickable and player can continue the story. If omitted, player can click and continue story immediately.
+* `clickable` - pause before the choice becomes clickable, and the player can continue the story. If omitted, the player can click and continue the story immediately.
 * `animation` - pause before displaying animation. If omitted, the animation displays immediately.
-* `continue` - pause before story continues automatically. If omitted, the game continues only after click or keypress.
+* `continue` - pause before the story continues automatically. If omitted, the game continues only after a click or keypress.
 
 All pauses are set in seconds.
 ```

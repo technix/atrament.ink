@@ -8,7 +8,7 @@ sidebar_position: 6
 
 ### Illustrations
 
-To add an illustration to the paragraph, you can use `#IMAGE` knot tag. The illustration is displayed before the paragraph and is automatically resized to fit the screen.
+To add an illustration to the paragraph, you can use the `#IMAGE` knot tag. The illustration is displayed before the paragraph and is automatically resized to fit the screen.
 
 ```c
 === location_forest
@@ -16,7 +16,7 @@ To add an illustration to the paragraph, you can use `#IMAGE` knot tag. The illu
 You are entering the forest.
 ```
 
-You can also use `[picture]` markup tag to place the image in the text.
+You can also use the `[picture]` markup tag to place the image in the text.
 
 ```c
 === location_forest
@@ -38,7 +38,7 @@ The `[picture]` tag supports the following attributes:
 
 ### Inline images
 
-To place an inline image in text, use `[img]` markup tag. The image is resized to fit text height.
+To place an inline image in text, use the `[img]` markup tag. The image is resized to fit the text height.
 
 ```c
 You have found a sword: [img]images/sword.jpg[/img]. It is quite heavy.
@@ -58,7 +58,7 @@ To enable page background on the title screen, use `#background` global tag:
 # background: images/forest_bg.jpg
 ```
 
-Later in the game you can change or disable it with `#PAGE_BACKGROUND` knot tag:
+Later in the game, you can change or disable it with the `#PAGE_BACKGROUND` knot tag:
 
 ```c
 === story_knot1
@@ -70,7 +70,7 @@ Later in the game you can change or disable it with `#PAGE_BACKGROUND` knot tag:
 
 #### Scenes background
 
-To set or remove background image for the scene area, use `#BACKGROUND` knot tag:
+To set or remove a background image for the scene area, use the `#BACKGROUND` knot tag:
 
 ```c
 === story_knot1
@@ -107,11 +107,11 @@ It became quiet.
 
 ## Music
 
-The music track plays in a loop. There can be multiple music tracks, played simultaneously.
+The music track plays in a loop. There can be multiple music tracks played simultaneously.
 
-Information on current music track is saved to a game state. When the game is restored from a save, the music starts playing automatically.
+Information on the current music track is saved to a game state. When the game is restored from a save, the music starts playing automatically.
 
-To play a music track, use `#PLAY_MUSIC` knot tag. All music trackes defined in the knot start to play simultaneously.
+To play a music track, use the `#PLAY_MUSIC` knot tag. All music tracks defined in the knot start to play simultaneously.
 
 ```c
 === level1

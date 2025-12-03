@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ### Scenes alignment
 
-Atrament outputs scenes in the middle of the screen. You can change scene alignment with `#scenes_align` global tag, setting it to `top`, `center`, or `bottom`.
+Atrament outputs scenes in the middle of the screen. You can change scene alignment with the `#scenes_align` global tag, setting it to `top`, `center`, or `bottom`.
 
 ```
 # scenes_align: center
@@ -25,13 +25,13 @@ Atrament outputs all the paragraphs between choice blocks as one scene. If you n
 
 ## History
 
-Atrament shows a scrollable history of previous scenes. If you don't need it, you can disable it with `#single_scene` global tag:
+Atrament shows a scrollable history of previous scenes. If you don't need it, you can disable it with the `#single_scene` global tag:
 
 ```
 # single_scene
 ```
 
-To clear scene history, you can use `#CLEAR` knot tag. This is useful when player enters a new location or conversation.
+To clear scene history, you can use the `#CLEAR` knot tag. This is useful when the player enters a new location or conversation.
 
 ```c
 === house_scene
@@ -53,9 +53,9 @@ Game over.
 
 ## Hypertext
 
-In the hypertext mode the choices are not displayed below the scene text. You can link specific portions of scene text to the choices.
+In the hypertext mode, the choices are not displayed below the scene text. You can link specific portions of scene text to the choices.
 
-To enable this mode for the whole game, use `#hypertext` global tag. There is no way to turn it off later.
+To enable this mode for the whole game, use the `#hypertext` global tag. There is no way to turn it off later.
 
 ```c
 # hypertext
@@ -76,6 +76,6 @@ There is a [link=Examine mailbox]small mailbox[/link] here.
 + [Open door] -> inside_house
 ```
 
-If your entire game is in be hypertext mode, it is recommended to set the following global tags:
+If your entire game is in a hypertext mode, it is recommended to set the following global tags:
 * `#single_scene` - disables scrollable history
 * `#scenes_align: top` - aligns text to the top of the window
