@@ -70,7 +70,7 @@ Tables can be created with these markup tags:
 ```
 
 :::warning
-Please note the lue operator `<>` at the end of each table line - this is required to render the table properly.
+Please note the glue operator `<>` at the end of each table line - this is required to render the table properly.
 :::
 
 The table consists of header `[header][/header]` (optional) and rows `[row][/row]`. The `[ ]` tag is a cell separator.
@@ -222,7 +222,7 @@ The `[input]` tag supports the following attributes:
 | :-------- | :------------------------- |
 | `var=your_variable` | Mandatory. Name of the variable to save the entered value. |
 | `type=text` | Input type. Can be set to `text` (default) or `number`. If `type` is set to `number`, the value will be passed to the variable as a number. |
-| `placeholder=Your name` | A placeholder text for input. Displayed if the input value is empty.
+| `placeholder=Your name` | A placeholder text for input. Displayed if the input value is empty. |
 
 ### Button
 

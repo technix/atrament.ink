@@ -4,16 +4,12 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Atrament - Basics": {
-    "message": "Atrament - Basics",
+    "message": "Atrament - основи",
     "description": "The label for category Atrament - Basics in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Atrament - Basics.link.generated-index.description": {
-    "message": "Basic Atrament concepts.",
+    "message": "Основи написання ігор на Atrament.",
     "description": "The generated-index page description for category Atrament - Basics in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Markup": {
-    "message": "Markup",
-    "description": "The label for category Markup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Markup.link.generated-index.description": {
     "message": "Page markup elements.",

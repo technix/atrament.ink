@@ -30,7 +30,7 @@ The files and directories **not** mentioned in the diagram above (`node_modules`
 
 The game files are located in the `root/game` folder. The file `story.ink` is the main Ink script. You can have multiple Ink files and use the `INCLUDE` statement in the `story.ink` to combine them into one.
 
-Media files (images, sounds, music etc) should be placed in this folder. When you provide a path to them, it should be relative to the `root/game` folder:
+Media files (images, sounds, music etc) should be placed in this folder or its subfolders. When you provide a path to them, it should be relative to the `root/game` folder:
 
 ```bash title="Directory structure"
 ├─ root/
