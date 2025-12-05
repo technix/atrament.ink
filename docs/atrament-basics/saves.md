@@ -74,6 +74,8 @@ To enable saves, add `#saves` global tag to your script and set its value to the
 
 When saves are enabled, players can save and load games using the slots provided.
 
+![Saves](/img/doc/saves.png)
+
 ## Sessions
 
 Atrament supports multiple user sessions for games. To enable this feature, add `#sessions` global tag to your script and set its value to the number of sessions:
@@ -86,6 +88,7 @@ When sessions are enabled, players will have to choose a game session before sta
 
 Players can delete sessions. When a session is deleted, all associated saves are deleted too.
 
+![Sessions](/img/doc/sessions.png)
 
 ## Persistent variables
 

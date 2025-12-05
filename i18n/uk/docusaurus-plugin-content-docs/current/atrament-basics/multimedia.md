@@ -48,8 +48,6 @@ sidebar_position: 6
 
 Є два типи фонів: фон сторінки та фон сцен.
 
-TODO: screenshot with explanation
-
 #### Фон сторінки
 
 Щоб додати фон сторінки на стартовий екран, використовуйте глобальний тег `#background`:
@@ -68,6 +66,8 @@ TODO: screenshot with explanation
 # PAGE_BACKGROUND: false // прибрати фон сторінки
 ```
 
+![Фон сторінки](/img/doc/background-page.png)
+
 #### Фон сцен
 
 Щоб додати чи прибрати фон для текстових сцен, використовуйте тег параграфу `#BACKGROUND`:
@@ -80,6 +80,7 @@ TODO: screenshot with explanation
 # BACKGROUND: false // прибрати фон для сцен
 ```
 
+![Фон сцен](/img/doc/background-scene.png)
 
 ## Звуки
 

@@ -17,6 +17,8 @@ Clicking the `≡` screen button displays the application menu. It can contain d
 - save game menu (if saves are enabled)
 - settings: full screen mode, animations, sound volume, font face and size, and color theme.
 
+![Application menu](/img/doc/application-menu.png)
+
 ### Keyboard shortcuts
 
 | Key | Description |

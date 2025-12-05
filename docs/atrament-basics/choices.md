@@ -50,6 +50,8 @@ Your enemy is waiting.
 + [Evade] -> combat_evade
 ```
 
+![Prompt](/img/doc/prompt.png)
+
 ## Disabled choices
 
 Instead of hiding a choice based on a condition, you can make it unclickable with the `#UNCLICKABLE` choice tag (alternate syntax: `#DISABLED`, `#INACTIVE`). The choice will be displayed as disabled, and users will not be able to choose it.
@@ -73,6 +75,8 @@ VAR weapon = "sword"
 + [Return to map #UNCLICKABLE] // this one is always disabled
     -> story
 ```
+
+![Disabled choices](/img/doc/disabled-choices.png)
 
 ## Click to continue
 

@@ -13,6 +13,8 @@ To enable the debugger, set the global tag `#debug` in your main Ink script:
 
 The debugger window opens when you double-press the `~` key or click the debugger button on the screen.
 
+![Debugger button](/img/doc/debugger-button.png)
+
 ## Sections
 
 ### Info

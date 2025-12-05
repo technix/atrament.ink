@@ -48,8 +48,6 @@ You have found a sword: [img]images/sword.jpg[/img]. It is quite heavy.
 
 There are two types of background: page background and scene background.
 
-TODO: screenshot with explanation
-
 #### Page background
 
 To enable page background on the title screen, use `#background` global tag:
@@ -68,6 +66,8 @@ Later in the game, you can change or disable it with the `#PAGE_BACKGROUND` knot
 # PAGE_BACKGROUND: false // disable page background
 ```
 
+![Page background](/img/doc/background-page.png)
+
 #### Scenes background
 
 To set or remove a background image for the scene area, use the `#BACKGROUND` knot tag:
@@ -79,6 +79,8 @@ To set or remove a background image for the scene area, use the `#BACKGROUND` kn
 === story_knot2
 # BACKGROUND: false // disable scenes background
 ```
+
+![Scene background](/img/doc/background-scene.png)
 
 
 ## Sounds

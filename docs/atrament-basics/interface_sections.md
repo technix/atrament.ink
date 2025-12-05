@@ -28,6 +28,8 @@ The toolbar content refreshes:
 
 The toolbar can contain buttons and other active content.
 
+![Toolbar](/img/doc/toolbar.png)
+
 ## Overlay
 
 Atrament can display custom data (inventory, character stats, etc.) as an overlay.
@@ -55,10 +57,14 @@ Example of the toolbar with overlays:
 
 The overlay content can have buttons and other active content. If a function, assigned to a button, has text output, it will be displayed as a new overlay. Otherwise, the current overlay content will be refreshed.
 
+![Fullscreen overlay](/img/doc/overlay-fullscreen.png)
+
 The overlay can be displayed as a modal window instead of full screen. To do so, add `display=modal` attribute to the button:
 ```
 [button onclick=inventory display=modal]Inventory[/button]
 ```
+
+![Modal overlay](/img/doc/overlay-modal.png)
 
 ## "About" screen
 

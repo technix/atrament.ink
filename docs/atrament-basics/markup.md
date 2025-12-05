@@ -57,6 +57,8 @@ You can use the `[block]` markup tag to change text appearance. Blocks can have 
 | `align` | Horizontal text alignment in the block. Can be set to  `left`, `center`, or `right`. |
 | `valign` | Vertical text alignment in the block. Can be set to `top`, `middle`, or `bottom`. |
 
+![Block](/img/doc/block.png)
+
 ### Tables
 
 Tables can be created with these markup tags:
@@ -84,6 +86,7 @@ The `[table]` markup tag supports the following attributes:
 | `columns="20% 20% 60%"` | Set column width. You have to set a width for each column in the table. |
 | `fixed=true` | Force text wrapping in the cells, so columns always have a fixed width. |
 
+![Table](/img/doc/table.png)
 
 ## Presentation
 
@@ -102,6 +105,8 @@ The `[banner]` tag supports the following attributes:
 | `style=accent` | Use accent color for text. |
 | `allcaps=true` | Display text in all capitals. |
 
+![Banner](/img/doc/banner.png)
+
 ### Info
 
 To display text as an information block, use `[info]` markup tag:
@@ -117,6 +122,8 @@ The `[info]` tag supports the following attributes:
 | `font=system` | Use system font. Useful for gameplay tips. |
 | `side=highlight` | Add color to the left side of the info box. Can be set to `highlight` or `accent`. | 
 
+![Info block](/img/doc/info-block.png)
+
 ### Spoiler
 
 For hidden text use `[spoiler]` markup tag:
@@ -127,6 +134,7 @@ To defeat a dragon, you need to [spoiler]fight it with your bare hands.[/spoiler
 
 When the user clicks on a spoiler text, it will be displayed. The second click hides it again.
 
+![Spoiler](/img/doc/spoiler.png)
 
 ### Highlight
 
@@ -171,6 +179,8 @@ The `[progress]` tag supports the following attributes:
 | `min=0` | Minimal progress bar value. |
 | `max=100` | Maximal progress bar value. |
 | `style=accent` | Highlight progress bar with accent color. |
+
+![Progress bar](/img/doc/progressbar.png)
 
 ## Links
 
@@ -224,6 +234,8 @@ The `[input]` tag supports the following attributes:
 | `type=text` | Input type. Can be set to `text` (default) or `number`. If `type` is set to `number`, the value will be passed to the variable as a number. |
 | `placeholder=Your name` | A placeholder text for input. Displayed if the input value is empty. |
 
+![Input](/img/doc/input.png)
+
 ### Button
 
 Button can be used to run Ink functions.
@@ -231,6 +243,8 @@ Button can be used to run Ink functions.
 ```
 [button onclick=stats]Show stats[/button]
 ```
+
+![Button](/img/doc/button.png)
 
 If the function has the text output, it will be displayed in a full-screen overlay window - see [Overlays](./interface_sections.md#overlay). Otherwise, it updates the current overlay window, if any.
 
@@ -242,3 +256,4 @@ The `[button]` tag supports the following attributes:
 | `disabled=true` | If set, the button is disabled and can't be clicked. |
 | `bordered=false` | Don't show button borders. Useful if you use an inline image `[img]` as a button content. |
 | `display=modal` | If set, the button displays a modal overlay instead of full-screen. |
+

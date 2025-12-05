@@ -76,6 +76,8 @@ There is a [link=Examine mailbox]small mailbox[/link] here.
 + [Open door] -> inside_house
 ```
 
+![Hypertext](/img/doc/hypertext.png)
+
 If your entire game is in a hypertext mode, it is recommended to set the following global tags:
 * `#single_scene` - disables scrollable history
 * `#scenes_align: top` - aligns text to the top of the window
