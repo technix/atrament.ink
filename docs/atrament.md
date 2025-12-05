@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # What is Atrament
@@ -7,6 +7,11 @@ sidebar_position: 2
 Atrament is a modular tool to create text games or interactive fiction stories for the web and desktop. It uses [Ink](https://www.inklestudios.com/ink/) as a scripting language and JavaScript+CSS as a runtime and presentation layer.
 
 Most of this documentation describes how to create games with Atrament Web UI.
+
+Example of a game made with Atrament:
+
+!["The Coiled Crown"](/img/doc/the-coiled-crown.png)
+
 
 ## Components
 

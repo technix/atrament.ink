@@ -4,13 +4,29 @@ sidebar_position: 5
 
 # Game UI
 
-The web application has three screens:
+## Screens
 
-- **title** screen displays game information and start menu
-- **game** screen displays the game content
-- **about** screen (configurable) displays information about the game
+The web application has three screens.
 
-### Application menu
+### Title screen
+
+The **title** screen displays game information and start menu.
+
+![Title screen](/img/doc/app-title.png)
+
+### Game screen
+
+The **game** screen displays the game content.
+
+![Game screen](/img/doc/app-game.png)
+
+### "About" screen
+
+The **about** screen (configurable) displays information about the game.
+
+![About screen](/img/doc/app-about.png)
+
+## Application menu
 
 Clicking the `≡` screen button displays the application menu. It can contain different sections depending on the game configuration and the current screen:
 - load game menu (if saves are enabled)
@@ -19,7 +35,7 @@ Clicking the `≡` screen button displays the application menu. It can contain d
 
 ![Application menu](/img/doc/application-menu.png)
 
-### Keyboard shortcuts
+## Keyboard shortcuts
 
 | Key | Description |
 | :--- | :--- |
