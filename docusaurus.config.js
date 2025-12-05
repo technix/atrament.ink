@@ -85,20 +85,6 @@ const config = {
             position: 'left',
             label: 'Games',
           },
-
-          /*
-          {
-            type: 'doc',
-            docId: 'atrament',
-            position: 'left',
-            label: 'Documentation',
-          },
-          {
-            href: 'https://github.com/technix/atrament-web-ui',
-            label: 'GitHub',
-            position: 'left',
-          },
-*/
           {
             type: 'localeDropdown',
             position: 'right',
@@ -110,10 +96,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Serhii "techniX" Mozhaiskyi. Built with Docusaurus.`,
         links: [
           {
-            html: 'Made with the support of the <a href="https://iftechfoundation.org/" target="_blank" rel="noreferrer noopener">Interactive Fiction Technology Foundation</a>'
-          },
-          {
-            html: 'Icons by <a href="https://icons8.com/" target="_blank" rel="noreferrer noopener">Icons8</a>'
+            label: "This is overridden in src/theme/Footer/Links",
+            href: 'https://atrament.ink/'
           }
         ]
       },
