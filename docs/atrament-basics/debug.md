@@ -48,7 +48,7 @@ input these values into form fields:
 | Input | Value |
 | :--- | :--- |
 | Run function | `test_function` |
-| Arguments | `{ name: "Peter Parker", age: 18}` |
+| Arguments | `[ "Peter Parker", 18 ]` |
 
 ### Navigation
 

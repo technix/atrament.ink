@@ -98,6 +98,20 @@ CONST GOLD_COIN_VALUE = 100
 This sword costs {5 * GOLD_COIN_VALUE} coins.
 ```
 
+## Mathematics
+
+Ink supports the four basic mathematical operations (`+`, `-`, `*`, and `/`), as well as `%` (or `mod`), which returns the remainder after integer division. 
+
+There are also several mathematical functions:
+
+| Function | Description |
+| :------- | :---------- |
+| `RANDOM(min, max)` | Random number between min and max (both are inclusive). `RANDOM(1,6)` returns an integer between 1 and 6. |
+| `POW(x, y)` | `x` power of `y`. `POW(3,2)` will be 9. |
+| `INT(x)` | Round to nearest integer. `INT(4.12)` will be 4. |
+| `FLOOR(x)` | Round to largest integer. `FLOOR(4.12)` will be 5. |
+
+
 ## Conditions
 
 You may use conditions to change text and show/hide choices. Conditions can involve variables and knot or stitch names (they are boolean variables that are set to `true` after visiting them).

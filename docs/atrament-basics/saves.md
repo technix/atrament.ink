@@ -91,7 +91,7 @@ Players can delete sessions. When a session is deleted, all associated saves are
 
 You can save Ink variables between game restarts - for example, to count how many times the player started this game, or to keep the player's achievements and high scores.
 
-To define a variable as persistent, add the `persist` global tag for each variable you need to save this way:
+To define a variable as persistent, add the `#persist` global tag for each variable you need to save this way:
 
 ```c title="story.ink"
 # persist: restarts

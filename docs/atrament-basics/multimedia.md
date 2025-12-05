@@ -93,7 +93,7 @@ To play a sound, use `#PLAY_SOUND` knot tag. All sounds defined in the knot star
 Someone rang the doorbell.
 ```
 
-To stop playing sound, use `STOP_SOUND` knot tag:
+To stop playing sound, use `#STOP_SOUND` knot tag:
 
 ```c
 === doorbell_stops_ringing
@@ -119,7 +119,7 @@ To play a music track, use the `#PLAY_MUSIC` knot tag. All music tracks defined 
 You are entering the dungeon.
 ```
 
-To stop playing music, use `STOP_MUSIC` knot tag:
+To stop playing music, use `#STOP_MUSIC` knot tag:
 
 ```c
 === exit_dungeon
