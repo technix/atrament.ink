@@ -8,7 +8,7 @@ Atrament is a modular tool to create text games or interactive fiction stories f
 
 Most of this documentation describes how to create games with Atrament Web UI.
 
-Example of a game made with Atrament:
+Example of a game made with Atrament, "[The Coiled Crown](https://technix.itch.io/the-coiled-crown)":
 
 !["The Coiled Crown"](/img/doc/the-coiled-crown.png)
 

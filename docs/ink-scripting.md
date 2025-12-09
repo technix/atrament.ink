@@ -38,7 +38,7 @@ By default, Ink displays the text of the chosen choice as a part of the next par
 
 ## Knots and stitches
 
-Knots are named sections of your script - you can reference them in your diverts and conditions. Stitches are named sections inside of knots - you can reference them by name within the knot, but need to use the full name when referencing them from outside the knot.
+**Knots** are named sections of your script - you can reference them in your diverts and conditions. **Stitches** are named sections inside of knots - you can reference them by name within the knot, but need to use the full name when referencing them from outside the knot.
 
 ```c
 // This is a divert to a knot - normal Ink flow does not enter the knots.

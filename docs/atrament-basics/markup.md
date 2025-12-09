@@ -38,6 +38,48 @@ You may use a glue operator `<>` to make your markup more readable. It allows yo
 [/block]
 ```
 
+### Quotes
+
+Attribute quoting is optional:
+
+```
+// both examples are valid
+[table columns=20% 40% 20% border=false]
+
+// but this one is easier to read
+[table columns="20% 40% 20%" border=false] 
+```
+
+### Sizes
+
+Atrament UI is responsive, so it is recommended to set element sizes in percents:
+
+```
+[block width=50%]
+```
+
+However, any [CSS length units](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length) are valid:
+
+```
+[block width=200px]
+[block width=10em]
+```
+
+### Colors
+
+You can use any [CSS color units](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value) to set colors, for example:
+
+| Type | Example |
+| :----------- | :------------------------- |
+| [Named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color) | `[highlight color=red]text[/color]` |
+| RGB hexadecimal | `[highlight color=\#990000]text[/color]` |
+| RGB | `[highlight color=rgb(255 0 153)]text[/color]` |
+| RGB with opacity | `[highlight color=rgb(255 0 153 / 0.5)]text[/color]` |
+
+:::warning
+To use hex color codes, you need to escape the `#` symbols: `\#990000`.
+:::
+
 ## Layout
 
 
@@ -158,6 +200,12 @@ There is a [highlight color=\#990000 bgcolor=\#EEEEEE]treasure[/highlight] hidde
 ```
 :::
 
+### Font
+
+To change font for text, use `[font]` markup tag:
+```
+This text [font=Courier New]uses fixed-width font[/font].
+```
 
 ### Progress bar
 
@@ -257,3 +305,6 @@ The `[button]` tag supports the following attributes:
 | `bordered=false` | Don't show button borders. Useful if you use an inline image `[img]` as a button content. |
 | `display=modal` | If set, the button displays a modal overlay instead of full-screen. |
 
+## Custom markup
+
+Making of custom markup tags is described in the [developer documentation](../developer/atrament-ui.md#markup-tags).

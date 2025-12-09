@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Більша частина цієї документації описує створення ігор за допомогою Atrament Web UI.
 
-Приклад гри, зробленої на Атраменті:
+Приклад гри, зробленої на Атраменті - "[The Coiled Crown](https://technix.itch.io/the-coiled-crown)":
 
 !["The Coiled Crown"](/img/doc/the-coiled-crown.png)
 

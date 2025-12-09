@@ -94,13 +94,6 @@ You can use any valid CSS values for the theme parameters.
 
 Atrament is bundled with four fonts: Fira Sans, Lora, Merryweather, and OpenDyslexic. The user can switch fonts for the story text, unless they are explicitly defined for some elements.
 
-### Applying font to text
-
-To change font for text, use `[font]` markup tag:
-```
-This text [font=Courier New]uses fixed-width font[/font].
-```
-
 ### Adding and removing fonts
 
 To add a font to the application, create a folder in the `resources/fonts` folder with the following files:
