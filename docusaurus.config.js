@@ -50,6 +50,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          includeCurrentVersion: false,
         },
         blog: false,
         theme: {
@@ -92,6 +93,10 @@ const config = {
             docId: 'made-with-atrament',
             position: 'left',
             label: 'Games',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
           },
           {
             type: 'localeDropdown',
