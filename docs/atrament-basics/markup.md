@@ -80,8 +80,33 @@ You can use any [CSS color units](https://developer.mozilla.org/en-US/docs/Web/C
 To use hex color codes, you need to escape the `#` symbols: `\#990000`.
 :::
 
+### CSS Classes
+
+All markup tags support `class` attribute, so you can apply CSS classes to the markup elements:
+
+```
+[block width=50% class="custom_css_class"]Text[/block]
+```
+
+See "[Customization](atrament-extras/customization.md)" section on how to add custom CSS classes to Atrament project.
+
 ## Layout
 
+### Separator
+
+You can separate text paragraphs with horizontal line, using `[---]` markup tag.
+
+```
+First block of content.
+[---]
+second block of content.
+[--- width=30%]
+Third block of content.
+```
+
+| Attribute | Description                |
+| :-------- | :------------------------- |
+| `width` | Separator width (default is "60%"). Can be defined in percents (strongly recommended) or other CSS units. |
 
 ### Blocks
 
@@ -204,7 +229,7 @@ There is a [highlight color=\#990000 bgcolor=\#EEEEEE]treasure[/highlight] hidde
 
 To change font for text, use `[font]` markup tag:
 ```
-This text [font=Courier New]uses fixed-width font[/font].
+This text [font family=Courier New]uses fixed-width font[/font].
 ```
 
 ### Progress bar
@@ -234,22 +259,30 @@ The `[progress]` tag supports the following attributes:
 
 ### Choice link
 
-The `[link]` markup tag allows you to create links to choices. This is mostly used for [hypertext](atrament-basics/story.md#hypertext) mode.
+The `[link]` markup tag allows you to create links to choices or run Ink functions. This is mostly used for [hypertext](atrament-basics/story.md#hypertext) mode.
 
 ```
 === continue_story
-[link=Continue game]Click here to continue[/link]
+[link to=Continue game]Click here to continue[/link]
 
 + [Continue game]
     -> continue_knot
 ```
+
+The `[link]` tag supports the following attributes:
+
+| Attribute | Description                |
+| :-------- | :------------------------- |
+| `to="Choice Text"` | Choice text of the choice to be selected when the link is clicked. |
+| `onclick=InkFunction` | Name of the function to be called when the link is clicked. This function can't take parameters. |
+| `display=modal` | If set, the link with `onclick` attribute displays a modal overlay instead of full-screen. |
 
 ### URL
 
 To create an external link, use `[url]` markup tag:
 
 ```
-Visit [url=http:\/\/atrament.ink/]Atrament[/url] web site.
+Visit [url href=http:\/\/atrament.ink/]Atrament[/url] web site.
 ```
 
 :::warning
