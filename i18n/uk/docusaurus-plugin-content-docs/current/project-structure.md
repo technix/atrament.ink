@@ -14,6 +14,7 @@ my-atrament-game/
 │  ├─ fonts/
 │  ├─ locales/
 │  ├─ styles/
+│  ├─ templates/
 │  ├─ themes/
 ├─ src/
 ├─ root/
@@ -60,6 +61,7 @@ PLAY_SOUND: sounds/thunder.mp3
 | `fonts` | Містить файли шрифтів. Ви можете додати нові шрифти або видалити існуючі. Дивіться розділ "[Оформлення](atrament-extras/customization.md)". |
 | `locales` | Містить переклади інтерфейсу Атраменту. Ви можете використовувати `ua.json` як шаблон для створення власних перекладів. |
 | `styles` | Містить файл `custom.css`, куди ви можете додати власні CSS класи, або перевизначити вже існуючі. Дивіться розділ "[Оформлення](atrament-extras/customization.md)". |
+| `templates` | Містить HTML-шаблони. Дивіться розділ "[HTML-шаблони](atrament-extras/templates.md)". |
 | `themes` | Містить теми оформлення застосунку. Дивіться розділ "[Оформлення](atrament-extras/customization.md)". |
 
 ## Конфігурація

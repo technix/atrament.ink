@@ -14,6 +14,7 @@ my-atrament-game/
 │  ├─ fonts/
 │  ├─ locales/
 │  ├─ styles/
+│  ├─ templates/
 │  ├─ themes/
 ├─ src/
 ├─ root/
@@ -60,6 +61,7 @@ The `resources` folder contains additional resources for the Atrament Web UI: fo
 | `fonts` | Contains custom fonts. You can add your fonts here or remove existing ones. See "[Customization](atrament-extras/customization.md)". |
 | `locales` | Contains translations of the Atrament UI. You can use `en.json` as a boilerplate to create a translation to your language. |
 | `styles` | Contains `custom.css` file, where you can define custom CSS classes or override existing ones. See "[Customization](atrament-extras/customization.md)". |
+| `templates` | Contains HTML templates. See "[HTML templates](atrament-extras/templates.md)". |
 | `themes` | Contains color themes for the application. See "[Customization](atrament-extras/customization.md)". |
 
 ## Configuration
