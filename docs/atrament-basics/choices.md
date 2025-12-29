@@ -6,7 +6,24 @@ sidebar_position: 4
 
 ## Appearance
 
-To change the choice appearance, use the `#choices` global tag with a combination of attributes:
+To change the choice appearance, use the `#choices` global tag:
+
+```
+# choices: grouped numbered left
+```
+
+To change the choice appearance for a single scene only, use knot tag `#CHOICES`:
+
+```c
+=== combat
+# CHOICES: grouped row
+Your enemy is waiting.
++ [Attack] -> combat_attack
++ [Defend] -> combat_defend
++ [Evade] -> combat_evade
+```
+
+These tags support the following attributes:
 
 | Attribute | Description                |
 | :-------- | :------------------------- |
@@ -16,9 +33,7 @@ To change the choice appearance, use the `#choices` global tag with a combinatio
 | `right` | Align choice text to the right. |
 | `row` | Show all choices in a single row. |
 
-```
-# choices: grouped numbered left
-```
+![Choice appearance](/img/doc/choice-appearance.png)
 
 ## Shuffled choices
 
@@ -77,6 +92,31 @@ VAR weapon = "sword"
 ```
 
 ![Disabled choices](/img/doc/disabled-choices.png)
+
+## Hidden choices
+
+You can hide choices in UI with the `#HIDDEN` choice tag. The choice is not visible and can't be selected from UI, but can be referenced by `[link]` or triggered with `#AUTO_CHOICE`.
+
+```c
+=== combat
+Your enemy is waiting.
++ [Attack] -> combat_attack
++ [Defend] -> combat_defend
++ [Evade#HIDDEN] -> combat_evade // this option will be hidden
+```
+
+## Automatic choice
+
+You can make specific or random choice automatically with `#AUTO_CHOICE` knot tag:
+
+```# AUTO_CHOICE: delay=10 choice="Some choice"```
+
+| Attribute | Description                |
+| :-------- | :------------------------- |
+| `delay` | Set a delay before automatic choice and displays a choice timer bar. If omitted, a choice is selected immediately. |
+| `choice` | Text of the choice to be auto-selected. If omitted, a choice option will be selected randomly. |
+
+![Automatic choice with timer](/img/doc/auto-choice.png)
 
 ## Click to continue
 
