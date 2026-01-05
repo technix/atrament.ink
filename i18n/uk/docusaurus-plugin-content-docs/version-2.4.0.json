@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Basics": {
+    "message": "Робота з Атраментом",
+    "description": "The label for category Atrament - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Basics.link.generated-index.description": {
+    "message": "Основи написання ігор на Атраменті",
+    "description": "The generated-index page description for category Atrament - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Markup.link.generated-index.description": {
+    "message": "Page markup elements.",
+    "description": "The generated-index page description for category Markup in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Extras": {
+    "message": "Додаткові можливості",
+    "description": "The label for category Atrament - Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Atrament - Extras.link.generated-index.description": {
+    "message": "Додаткова функціональність Атраменту.",
+    "description": "The generated-index page description for category Atrament - Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "Для програмістів",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers.link.generated-index.description": {
+    "message": "Внутрішня реалізація рушія Атрамент.",
+    "description": "The generated-index page description for category For Developers in sidebar tutorialSidebar"
+  }
+}
