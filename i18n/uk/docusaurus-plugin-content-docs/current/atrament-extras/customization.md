@@ -54,6 +54,16 @@ sidebar_position: 1
 + [Ухилитися] -> combat_evade
 ```
 
+### Декілька CSS файлів
+
+Якщо в вашому проєкті багато CSS-класів, ви можете розбити їх на декілька файлів в каталозі `resources/styles`, а потім включити до основного файлу стилів `resources/styles/custom.css` за допомогою інструкції `@import`:
+
+```css title="resources/styles/custom.css"
+@import url(first_css_file.css);
+@import url(second_css_file.css);
+```
+
+
 ## Теми
 
 Щоб додати нову тему оформлення, створіть JSON-файл в каталозі `resources/themes` з такою структурою:

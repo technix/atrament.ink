@@ -54,6 +54,15 @@ Your enemy is [css class="underlined"]waiting[/css].
 + [Evade] -> combat_evade
 ```
 
+### Multiple CSS files
+
+If you have a lot of CSS classes, you can separate them into different files in the `resources/styles` folder and include them into the main style file `resources/styles/custom.css` with `@import` instruction:
+
+```css title="resources/styles/custom.css"
+@import url(first_css_file.css);
+@import url(second_css_file.css);
+```
+
 ## Themes
 
 To add a theme to the application, create a JSON file in the `resources/themes` folder with the following structure:

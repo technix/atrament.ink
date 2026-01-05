@@ -53,7 +53,7 @@ The `logo.png` in the `root` folder is used to create icons for both web and des
 
 ## Resources
 
-The `resources` folder contains additional resources for the Atrament Web UI: fonts, language locales, CSS styles, color themes, and external functions.
+The `resources` folder contains additional resources for the Atrament Web UI: fonts, language locales, CSS styles, color themes, and external functions. These files will be embedded into the web page or application when the game is published.
 
 | Folder | Description |
 |---|---|
