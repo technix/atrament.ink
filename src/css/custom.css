@@ -38,6 +38,8 @@ footer a {
   color: #FFFFFF;
 }
 
-.footer__link-item {
-  width: auto;
+@media (max-width: 996px) {
+  .footer__link-item {
+    width: auto;
+  }
 }
