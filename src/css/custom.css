@@ -37,3 +37,7 @@ footer a {
 .footer__link-item:hover, .footer__link-item a:hover {
   color: #FFFFFF;
 }
+
+.footer__link-item {
+  width: auto;
+}
