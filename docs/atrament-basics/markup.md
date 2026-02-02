@@ -188,6 +188,7 @@ The `[info]` tag supports the following attributes:
 | :-------- | :------------------------- |
 | `font=system` | Use system font. Useful for gameplay tips. |
 | `side=highlight` | Add color to the left side of the info box. Can be set to `highlight` or `accent`. | 
+| `align=left` | Set text alignment: `left`, `right`, or `center`. |
 
 ![Info block](/img/doc/info-block.png)
 
@@ -252,6 +253,9 @@ The `[progress]` tag supports the following attributes:
 | `min=0` | Minimal progress bar value. |
 | `max=100` | Maximal progress bar value. |
 | `style=accent` | Highlight progress bar with accent color. |
+| `border=false` | If set, progressbar borders are hidden. |
+| `display=thin` | If set, show progressbar as thin line with. |
+| `solid=true` | If set, the bar will be less opaque. |
 
 ![Progress bar](/img/doc/progressbar.png)
 

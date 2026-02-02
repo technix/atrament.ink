@@ -23,11 +23,15 @@ Displays story file name, story seed, turn index, and current story path.
 
 ### Global tags
 
-Displays story global tags. Unknown tags are highlighted.
+Displays story global tags and their number. Unknown tags are highlighted.
+
+### Scene tags
+
+Displays current scene tags and their number. Unknown tags are highlighted.
 
 ### Variables
 
-Displays current values of Ink variables. You can filter variables by name.
+Displays current values of Ink variables and their total number. You can filter variables by name.
 
 To edit the variable, click on its value. Edit the value, then click `>` to save the variable, or `X` to cancel.
 
