@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "2.3.1",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Atrament - Basics": {
@@ -12,7 +12,7 @@
     "description": "The generated-index page description for category Atrament - Basics in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Markup.link.generated-index.description": {
-    "message": "Page markup elements.",
+    "message": "Елементи розмітки",
     "description": "The generated-index page description for category Markup in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Atrament - Extras": {
@@ -20,7 +20,7 @@
     "description": "The label for category Atrament - Extras in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Atrament - Extras.link.generated-index.description": {
-    "message": "Додаткова функціональність Атраменту.",
+    "message": "Додаткова функціональність Атраменту",
     "description": "The generated-index page description for category Atrament - Extras in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.For Developers": {
@@ -28,7 +28,7 @@
     "description": "The label for category For Developers in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.For Developers.link.generated-index.description": {
-    "message": "Внутрішня реалізація рушія Атрамент.",
+    "message": "Внутрішня реалізація рушія Атрамент",
     "description": "The generated-index page description for category For Developers in sidebar tutorialSidebar"
   }
 }
