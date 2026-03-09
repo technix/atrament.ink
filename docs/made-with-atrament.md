@@ -13,6 +13,7 @@ sidebar_position: 9
 * [The Loop](https://wolfrug.itch.io/the-loop-gmtk-2025)
 * [Martingale](https://sachone.itch.io/martingale)
 * [Sun Runners](https://jon-keevy.itch.io/sunrunners-0-2)
+* [Дороги не варті назв](https://technix.itch.io/roads-not-worthy-of-names)
 
 
 ## Tools
