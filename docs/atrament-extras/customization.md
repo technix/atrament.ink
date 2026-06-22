@@ -103,9 +103,19 @@ You can use any valid CSS values for the theme parameters.
 
 Atrament is bundled with four fonts: Fira Sans, Lora, Merryweather, and OpenDyslexic. The user can switch fonts for the story text, unless they are explicitly defined for some elements.
 
-### Adding and removing fonts
+### Adding Google fonts
 
-To add a font to the application, create a folder in the `resources/fonts` folder with the following files:
+To add any [Google font](https://fonts.google.com/) to the application, run the following command in the terminal, supplying quoted font name as a last parameter, for example:
+
+```
+npm run download-google-font "IBM Plex Sans"
+```
+
+It will download the font into `resources/fonts` subfolder and create all the required CSS and JS files.
+
+### Adding custom fonts
+
+To add a custom font to the application, create a folder in the `resources/fonts` folder with the following files:
 * `index.js` with the following content:
 ```js
 import('./index.css');
@@ -116,5 +126,7 @@ export default {
 ```
 * `index.css`, which includes corresponding `@font-face` directives
 * font files, referenced in the `index.css`.
+
+### Removing fonts
 
 To remove a font from the application, delete the font folder from `resources/fonts`.

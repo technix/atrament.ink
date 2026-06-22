@@ -59,4 +59,22 @@ On first run, this command downloads NeutralinoJS build toolchain, so an interne
 Executable files for all platforms will be in the `build/standalone` folder. The build also creates ZIP archives for each platform.
 
 
+## Android
 
+:::warning
+Atrament uses [Docker](https://www.docker.com/) for Android build. [Install Docker](https://www.docker.com/get-started/) for your platform before proceeding.
+:::
+
+
+To build Android packages, run this command in the terminal:
+
+```
+npm run build-android
+```
+
+:::warning
+Android build requires internet access to download [atrament-android-builder](https://hub.docker.com/r/frenzytechnix/atrament-android-builder) Docker image (on first start) and Android build toolchain.
+:::
+
+
+Standalone APK package and Play Market AAB bundle will be in the `build/android` folder.
