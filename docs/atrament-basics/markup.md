@@ -171,6 +171,8 @@ The `[banner]` tag supports the following attributes:
 | :-------- | :------------------------- |
 | `style=accent` | Use accent color for text. |
 | `allcaps=true` | Display text in all capitals. |
+| `align=left` | Set text alignment: `left`, `right`, or `center` (default). |
+| `border=none` | Set borders: `both` (default), `top`, `bottom`, or `none`. |
 
 ![Banner](/img/doc/banner.png)
 

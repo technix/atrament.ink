@@ -32,6 +32,7 @@ These tags support the following attributes:
 | `left` | Align choice text to the left. |
 | `right` | Align choice text to the right. |
 | `row` | Show all choices in a single row. |
+| `grid-N` | Display choices as grid with N columns. For example, `grid-3` will display choices as a 3-column grid. |
 | `borderless` | Do not display borders of choice buttons. |
 
 ![Choice appearance](/img/doc/choice-appearance.png)

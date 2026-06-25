@@ -37,3 +37,9 @@ To avoid this, you can create an Ink function with the same name - it will act a
 # allow_external_function_fallbacks
 Your story begins here.
 ```
+
+## Utility functions
+
+File `resources/externals/utilities.js.txt` contains implementation of useful external functions. To use them in your Atrament project, do the following:
+1. Rename this file to `utilities.js`.
+2. Add lines with function definition, listed at the beginning of this file (for example, `EXTERNAL UPPERCASE(str)`) to your Ink script.

@@ -76,6 +76,29 @@ When saves are enabled, players can save and load games using the slots provided
 
 ![Saves](/img/doc/saves.png)
 
+### Save game descriptions
+
+By default, saves are named with the date and time when the save was created. You can add a custom description to the save or use excerpt from scene text.
+
+#### Custom save description
+
+To add a custom description to the save, use `ATRAMENT_SAVE_DESCRIPTION` variable in your script. Atrament will set save name to current value of this variable.
+
+```
+VAR ATRAMENT_SAVE_DESCRIPTION = "In a kingdom far, far away..."
+
+=== dark_forest
+~ ATRAMENT_SAVE_DESCRIPTION = "Dark forest path"
+```
+
+#### Save description from scene text
+
+If `ATRAMENT_SAVE_DESCRIPTION` variable is not set, Atrament can use excerpt from scene text as a save description. To enable this feature, set global tag `#save_description_length` to define the desired length of the save description text (in symbols):
+
+```
+# save_description_length: 50
+```
+
 ## Sessions
 
 Atrament supports multiple user sessions for games. To enable this feature, add `#sessions` global tag to your script and set its value to the number of sessions:
