@@ -1,0 +1,79 @@
+---
+sidebar_position: 7
+---
+
+# Interface
+
+Atrament has several customizable UI elements:
+- toolbar above the text
+- overlay
+- "About" screen in the main menu
+
+## Toolbar
+
+By default, the toolbar contains the title of your game. To customize the toolbar, add `#toolbar` global tag to your main Ink story and set it to a function that will generate toolbar content:
+
+```c
+# toolbar: player_toolbar
+VAR health = 100
+VAR strength = 5
+
+=== function player_toolbar()
+    Health: {health} | Strength: {strength}
+```
+
+The toolbar content refreshes:
+- when the player makes a choice
+- after calling other Ink functions
+
+The toolbar can contain buttons and other active content.
+
+![Toolbar](/img/doc/toolbar.png)
+
+## Overlay
+
+Atrament can display custom data (inventory, character stats, etc.) as an overlay.
+
+First, you need to define an overlay function, which has to generate text content. Then, assign it to the `[button]` tag. If the first line of the function is a `[title]Overlay Title[/title]` tag, this title will be displayed in the toolbar.
+
+Example of the toolbar with overlays:
+```
+# toolbar: game_toolbar
+
+=== function game_toolbar()
+  [button onclick=inventory]Inventory[/button]
+  [button onclick=stats]Stats[/button]
+
+=== function inventory()
+  [title]Inventory[/title]
+  You are carrying:
+  ...
+
+=== function stats()
+  [title]Character: {character_name}[/title]
+  Health: {health}
+  ...
+```
+
+The overlay content can have buttons and other active content. If a function, assigned to a button, has text output, it will be displayed as a new overlay. Otherwise, the current overlay content will be refreshed.
+
+![Fullscreen overlay](/img/doc/overlay-fullscreen.png)
+
+The overlay can be displayed as a modal window instead of full screen. To do so, add `display=modal` attribute to the button:
+```
+[button onclick=inventory display=modal]Inventory[/button]
+```
+
+![Modal overlay](/img/doc/overlay-modal.png)
+
+## "About" screen
+
+You can add an "About" screen to the game with the `#about` global tag. When it is present, UI shows the "About" menu item on the main game page. Clicking it will display content from the function defined in the `#about` tag:
+```
+# about: game_about
+
+=== function game_about()
+  [banner]Game Title[/banner]
+  "About" screen content
+  ...
+```
